@@ -14,6 +14,13 @@ Parameters:
 
 Usage Example:
 	EXEC bronze.load_bronze;
+
+Additionally, we've added the following to the Bronze Stored Procedure:
+	- Print Messages for each section and step.
+	- Implement error handling.
+	- We've defined a few variables at the start in order to capture the duration.
+	- Print the duration of each step.
+	- Print the duration of loading Bronze.
 =============================================================================
 */
 
