@@ -108,28 +108,30 @@ Deliver actionable insights using SQL by performing:
 
 ```
 📁 data-warehouse-project/
-├── 📁 datasets/                          # Raw datasets used for the project (ERP and CRM data)
+├── 📁 datasets/                            # Raw datasets used for the project (ERP and CRM data)
 
-├── 📁 docs/                              # Project documentation and architecture details
-│   ├── 📄 data_architecture.drawio         # High-level project architecture (Bronze, Silver, Gold)
-│   ├── 📄 data_catalog.md                  # Catalog of datasets, including field descriptions and metadata 
-│   ├── 📄 data_flow.drawio                 # Visual representation of data flow across layers
-│   ├── 📄 data_integration.drawio          # Visual representation that depicts how Source Tables are connected
-│   ├── 📄 data_model.drawio                # Data model design (e.g., star schema)
-│   └── 📄 naming_conventions.md            # Consistent Naming guidelines for tables, columns, and files
+├── 📁 docs/                                # Project documentation and architecture details
+│   ├── 📄 data_architecture.drawio           # High-level project architecture (Bronze, Silver, Gold)
+│   ├── 📄 data_catalog.md                    # Catalog of datasets, including field descriptions and metadata 
+│   ├── 📄 data_flow.drawio                   # Visual representation of data flow across layers
+│   ├── 📄 data_flow_tasks.drawio             # Flow of tasks for each layer — ingestion, cleaning, validation, documentation, etc.
+│   ├── 📄 data_integration.drawio            # Visual representation that depicts how Source Tables are connected
+│   ├── 📄 data_layer_specifications.drawio   # Summarizes the objectives, transformations, and targets of each layer
+│   ├── 📄 data_model.drawio                  # Data model design (e.g., star schema)
+│   └── 📄 naming_conventions.md              # Consistent Naming guidelines for tables, columns, and files
 
-├── 📁 scripts/                           # All SQL-based work divided into two main tracks
+├── 📁 scripts/                             # All SQL-based work divided into two main tracks
 │
-│   ├── 📁 data_warehouse/                # Scripts for building the data warehouse
-│   │   ├── 📁 bronze/                      # Scripts for extracting and loading (full load) raw data
-│   │   ├── 📁 silver/                      # Scripts for cleaning and transforming data
-│   │   └── 📁 gold/                        # Scipts for creating analytical models (views and data models)
+│   ├── 📁 data_warehouse/                  # Scripts for building the data warehouse
+│   │   ├── 📁 bronze/                        # Scripts for extracting and loading (full load) raw data
+│   │   ├── 📁 silver/                        # Scripts for cleaning and transforming data
+│   │   └── 📁 gold/                          # Scipts for creating analytical models (views and data models)
 │
-│   └── 📁 eda_analytics/                 # Scripts for EDA and advanced data (business) analytics
+│   └── 📁 eda_analytics/                   # Scripts for EDA and advanced data (business) analytics
 
-├── 📁 tests/                             # QA scripts for verifying integrity and logic of gold and silver layers
+├── 📁 tests/                               # QA scripts for verifying integrity and logic of gold and silver layers
 
-├── 📄 README.md                          # Project overview and instructions
+├── 📄 README.md                            # Project overview and instructions
 ```
 
 ## 📌 Key Deliverables
