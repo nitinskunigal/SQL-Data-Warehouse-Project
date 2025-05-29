@@ -11,6 +11,42 @@ Designed as a portfolio project, this repository showcases real-world best pract
 
 ---
 
+## 🏢 Business Overview
+
+This project is set in a **hypothetical mid-sized retail company** that sells consumer goods across multiple channels (e.g., online and in-store). The company uses a **CRM system** to track sales transactions along with core details of products and customers, and an **ERP system** to manage extended/ additional details of customers and products.
+
+Due to siloed systems and lack of integrated reporting, the company struggles with generating unified insights on product performance, customer behavior, and sales trends.
+
+To address this, a **modern data warehouse** was built using the Medallion Architecture (Bronze, Silver, Gold) in SQL Server, enabling clean, integrated, and business-ready data for analytics.
+
+---
+
+## 🎯 Problem Statement
+
+The company currently faces challenges such as:
+- Fragmented data across ERP and CRM systems
+- Manual reporting processes with inconsistent metrics
+- Inability to track customer behavior or product sales holistically
+
+This project solves these problems by:
+- Consolidating data from both systems into a structured data warehouse
+- Cleaning, transforming, and modeling the data for analytical use
+- Enabling rich SQL-based exploratory analysis for business decision-making
+
+---
+
+## 🎯 Objective
+
+Design and implement a complete **modern data warehousing and analytics pipeline** that:
+
+- Ingests and transforms raw ERP/CRM data
+- Follows best practices using Medallion Architecture
+- Supports SQL-driven insights for product, sales, and customer analysis
+
+The ultimate goal is to create a reusable, scalable data foundation that supports business intelligence, reporting, and data science use cases.
+
+---
+
 ## 📋 Business Requirements Gathering (Best-Practice Driven)
 
 Although this is a portfolio project based on hypothetical data and scenarios, it follows real-world best practices that are essential when building a modern data warehouse.
