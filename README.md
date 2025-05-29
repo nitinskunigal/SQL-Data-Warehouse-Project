@@ -104,7 +104,7 @@ Design and implement a modern data warehouse using **SQL Server** to consolidate
 
 ## 🧱 Data Warehouse Architecture
 
-![Data Warehouse Architecture Diagram](https://github.com/nitinskunigal/SQL-Data-Warehouse-Project/blob/main/docs/Modern%20Data%20Warehouse%20Architecture.drawio.png)
+![Data Warehouse Architecture Diagram](https://github.com/nitinskunigal/SQL-Data-Warehouse-and-Analytics-Project/blob/main/docs/data_architecture.drawio.png)
 
 📌 *This diagram illustrates the full Medallion Architecture (Bronze → Silver → Gold) and how data flows across layers in SQL Server.*
 
