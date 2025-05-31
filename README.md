@@ -1,11 +1,11 @@
-# Modern Data Warehouse & Analytics Project
+# SQL Data Warehouse & Analytics Project
 
-Welcome to the **Modern Data Warehouse & Analytics Project** repository!
+Welcome to the **SQL Data Warehouse & Analytics Project** repository!
 
-This project demonstrates the full cycle of a data-driven solution—from building a modern, scalable data warehouse to performing SQL-based exploratory and advanced analytics. The project is organized into **two key parts**:
+This project demonstrates the full cycle of a data-driven solution—from building a scalable data warehouse (using SQL Server) to performing SQL-based exploratory and advanced analytics and visualizing business insights through Power BI dashboards. The project is organized into **two key parts**:
 
 1. **Part 1: Data Engineering — Building the Data Warehouse**
-2. **Part 2: Data Analytics — SQL-based EDA & Business Insights**
+2. **Part 2: Data Analytics — SQL-based EDA & Advanced Data Analytics (generate business insights) and visualizing insights by building Power BI Dashboards**
 
 Designed as a portfolio project, this repository showcases real-world best practices in both **data engineering** and **data analytics** using SQL Server and the Medallion Architecture.
 
@@ -67,9 +67,7 @@ These questions help define the data ingestion strategy, transformation logic, m
 - Do we require full loads or incremental (delta) loads?
 - How large are the typical data extracts? Are there any volume constraints?
 - Are there known issues with data quality or completeness?
-- Are there any PII or compliance concerns (e.g., GDPR, HIPAA)?
 - What fields are most critical for business reporting and KPIs?
-- Are there lookup or master tables we need to join for enrichment?
 - How do we validate the correctness of the data post-ingestion?
 - What level of historization is required (if any)?
 - What are the reporting pain points that a data warehouse is expected to solve?
@@ -85,7 +83,7 @@ These questions help define the data ingestion strategy, transformation logic, m
 | **Tech Stack** | SQL Server, T-SQL, Stored Procedures, Views |
 | **Architecture** | Medallion Architecture (Bronze, Silver, Gold Layers) |
 | **Data Sources** | ERP and CRM data in CSV format |
-| **Objective** | Build a business-ready data warehouse and extract meaningful insights using SQL |
+| **Objective** | Build a business-ready data warehouse in SQL Server, extract meaningful insights using SQL, and visualize those insights by building Power BI Dashboards |
 
 ---
 
@@ -125,6 +123,10 @@ Deliver actionable insights using SQL by performing:
 - **Advanced SQL Analytics**
 - **Business Metric Computation**
 
+Visualize actionable insights using Power BI by showcasing:
+- **Important KPIs**
+- **Revenue and Other Trends**
+
 ### 🔍 Analysis Topics Covered
 - Customer segmentation and behavior
 - Product performance analysis
@@ -137,6 +139,7 @@ Deliver actionable insights using SQL by performing:
 - Optimized SQL scripts for each theme
 - Business questions addressed through metrics
 - Reusable SQL templates for BI teams
+- Power BI Dashboards
 
 ---
 
@@ -180,10 +183,10 @@ Deliver actionable insights using SQL by performing:
 
 - **Documentation** for the data model, transformations, and business use cases
 
+- **Power BI Dashboards**, shared online through Power BI Service
+
 ## 📎 Future Enhancements
 
 - Automating incremental loads via Change Data Capture (CDC)
-
-- Integrating a BI dashboard (e.g., Power BI or Tableau) on top of the Gold layer
 
 - Introducing historical data for time-trend tracking
