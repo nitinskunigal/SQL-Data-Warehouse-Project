@@ -288,7 +288,7 @@ This section demonstrates how the business-ready data from the Gold layer of the
 - **Conditional Formatting** and Trendlines to enhance storytelling
 - **Parameter Controls** for simulation and deeper analysis
 
-[Access Live Power BI Dashboard](https://app.powerbi.com/view?r=eyJrIjoiZDJmZjFlODUtZDNkZi00OGZmLThiYTgtYzE1ZWFjZTcxNTg2IiwidCI6ImM2ZTU0OWIzLTVmNDUtNDAzMi1hYWU5LWQ0MjQ0ZGM1YjJjNCJ9)
+[Access Live Power BI Dashboard](https://app.powerbi.com/view?r=eyJrIjoiNDdlNTViNmItZDZkNC00N2FkLWE2N2EtYzdjOWZkOGIwNTRiIiwidCI6ImM2ZTU0OWIzLTVmNDUtNDAzMi1hYWU5LWQ0MjQ0ZGM1YjJjNCJ9)
 
 ---
 
