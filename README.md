@@ -2,12 +2,30 @@
 
 Welcome to the **SQL Data Warehouse & Analytics Project** repository!
 
-This project demonstrates the full cycle of a data-driven solution—from building a scalable data warehouse (using SQL Server) to performing SQL-based exploratory and advanced analytics and visualizing business insights through Power BI dashboards. The project is organized into **two key parts**:
+This project demonstrates the full cycle of a data-driven solution — from building a scalable data warehouse using SQL Server to performing exploratory and advanced analytics and finally delivering powerful business insights through interactive Power BI dashboards.
 
-1. **Part 1: Data Engineering — Building the Data Warehouse**
-2. **Part 2: Data Analytics — SQL-based EDA & Advanced Data Analytics (generate business insights) and visualizing insights by building Power BI Dashboards**
+The project is structured into **three interconnected phases**, reflecting a full-stack analytics workflow:
 
-Designed as a portfolio project, this repository showcases real-world best practices in both **data engineering** and **data analytics** using SQL Server and the Medallion Architecture.
+1. **Data Engineering** — Design and implementation of a modern data warehouse using SQL Server and the Medallion Architecture
+2. **Data Analytics** — SQL-based exploratory and advanced analytics to uncover customer, product, and sales insights
+3. **Business Intelligence (BI)** — Visualization and storytelling using Power BI, including KPI dashboards, drillthrough reports, and dynamic filtering
+
+This end-to-end approach mirrors real-world data projects — from raw data to insights that drive decisions. Although the dataset is historical (2011–2014), it provided a rich opportunity to simulate real-world warehouse design, business rule application, and dashboard delivery — the skills demonstrated here are timeless.
+
+---
+
+## 📚 Table of Contents
+
+- [🏢 Business Overview](#-business-overview)
+- [🎯 Problem Statement](#-problem-statement)
+- [🎯 Objective](#-objective)
+- [📋 Business Requirements Gathering (Best-Practice Driven)](#-business-requirements-gathering-best-practice-driven)
+- [🚀 Project Overview](#-project-overview)
+- [🧱 Part 1: Building the Modern Data Warehouse](#-part-1-building-the-modern-data-warehouse)
+- [📈 Part 2: SQL-Based Analytics & Reporting](#-part-2-sql-based-analytics--reporting)
+- [📊 Power BI Dashboards & Business Insights](#-power-bi-dashboards--business-insights)
+- [📌 Key Deliverables](#-key-deliverables)
+- [📎 Future Enhancements](#-future-enhancements)
 
 ---
 
@@ -23,12 +41,12 @@ To address this, a **modern data warehouse** was built using the Medallion Archi
 
 ## 🎯 Problem Statement
 
-The company currently faces challenges such as:
+The company faced challenges such as:
 - Fragmented data across ERP and CRM systems
 - Manual reporting processes with inconsistent metrics
 - Inability to track customer behavior or product sales holistically
 
-This project solves these problems by:
+This project solved these problems by:
 - Consolidating data from both systems into a structured data warehouse
 - Cleaning, transforming, and modeling the data for analytical use
 - Enabling rich SQL-based exploratory analysis for business decision-making
@@ -118,14 +136,15 @@ The Gold layer includes star schema views, flat tables, and aggregated objects f
 ## 📈 Part 2: SQL-Based Analytics & Reporting
 
 ### 📌 Objective
-Deliver actionable insights using SQL by performing:
+Uncover key business insights using SQL by performing:
 - **Exploratory Data Analysis (EDA)**
-- **Advanced SQL Analytics**
-- **Business Metric Computation**
+- **Advanced Business Analytics**
+- **Segmentation, Performance Tracking, and Trend Detection**
 
-Visualize actionable insights using Power BI by showcasing:
-- **Important KPIs**
-- **Revenue and Other Trends**
+And then **visualize these insights** using Power BI by building:
+- Interactive, filterable dashboards
+- Customer and product-specific drilldowns
+- Dynamic Top-N analysis and What-if simulation controls
 
 ### 🔍 Analysis Topics Covered
 - Customer segmentation and behavior
@@ -172,6 +191,106 @@ Visualize actionable insights using Power BI by showcasing:
 
 ├── 📄 README.md                            # Project overview and instructions
 ```
+
+---
+
+> ⚠️ **Note on Historical Data**:  
+> While the dataset used in this project spans from 2011 to 2014, it was selected for its realistic structure and complexity. This allowed for a robust simulation of real-world business scenarios including data modeling, segmentation, and KPI analysis.  
+> 
+> The **recommendations provided** are not intended for tactical execution but to demonstrate how an analyst would draw insights and inform strategy in a production environment.
+
+---
+
+## 📊 Power BI Dashboards & Business Insights
+
+This section demonstrates how the business-ready data from the Gold layer of the data warehouse is brought into Power BI to uncover high-impact insights. The dashboards were designed to reflect real-world business reporting needs and stakeholder storytelling.
+
+---
+
+<details>
+<summary>🧭 <strong>Executive Dashboard</strong></summary>
+
+### 🎯 Focus:
+- Company-wide KPIs (Revenue, Profit, Orders, AOV)
+- Trend analysis and YoY comparisons
+- Category-level breakdowns
+- Dynamic Top N product matrix (filterable by metric)
+
+![Executive Dashboard Screenshot](https://github.com/nitinskunigal/SQL-Data-Warehouse-and-Analytics-Project/blob/main/docs/PBI%20-%20Executive%20Dashboard.png)
+
+### 🔍 Key Insights:
+- **Revenue** grew to $16.3M (↑179.77%) and **Orders** surged 550% YoY — demand clearly exploded in 2013.
+- However, **Avg Order Value** dropped 57% — indicating growth was volume-driven, not value-driven.
+- Accessories led order volume, but high performers in Bikes contributed most to profit.
+- Dynamic product matrix lets stakeholders view Top N products by Revenue, Orders, or AOV.
+
+### ✅ Recommendations:
+- Explore bundling or pricing strategies to improve AOV.
+- Monitor inventory and fulfillment capacity to manage volume efficiently.
+
+</details>
+
+---
+
+<details>
+<summary>👥 <strong>Customer Dashboard</strong></summary>
+
+### 🎯 Focus:
+- Customer-level KPIs: Revenue per Customer, Monthly Spend, Order Frequency
+- Top 100 customers by revenue and engagement
+- Segment-wise donut charts: Revenue and Orders by Segment
+- Time-series trends for Recency and Lifetime Value
+
+![Customer Dashboard Screenshot](https://github.com/nitinskunigal/SQL-Data-Warehouse-and-Analytics-Project/blob/main/docs/PBI%20-%20Customer%20Dashboard.png)
+
+### 🔍 Key Insights:
+- The company served **17.4K customers** in 2013 but most made **only 1.2 orders** on average.
+- Revenue per Customer: **$938**, with Monthly Spend averaging **$171**.
+- New Customers made up **76% of all orders**, but contributed less to revenue — pointing to a retention challenge.
+- VIPs and Regulars are small in number but hold higher per-customer value.
+
+### ✅ Recommendations:
+- Launch loyalty or reactivation campaigns to increase order frequency.
+- Segment-targeted promotions could convert New → Regular → VIP.
+
+</details>
+
+---
+
+<details>
+<summary>📦 <strong>Product Drillthrough Dashboard</strong></summary>
+
+### 🎯 Focus:
+- Performance deep-dive for selected product
+- Gauges comparing actual vs target for Orders, Revenue, Profit
+- Price sensitivity simulation: Adjusted Profit vs Base Profit
+- Weekly performance trends
+
+![Product Drillthrough Screenshot](https://github.com/nitinskunigal/SQL-Data-Warehouse-and-Analytics-Project/blob/main/docs/PBI%20-%20Product%20Drillthrough%20Dashboard.png)
+
+### 🔍 Key Insights:
+- Products like **Mountain-200 Black-46** underperformed vs targets.
+- With price adjustment simulations, stakeholders can assess impact on profit margins.
+- Weekly trendlines highlight periods of peak and slump for targeted interventions.
+
+### ✅ Recommendations:
+- Optimize pricing to strike a balance between margin and volume.
+- Evaluate promotional timing for products with seasonal or demand dips.
+
+</details>
+
+---
+
+### 📌 Dashboard Features & Highlights:
+- **Slicer Panel with Bookmarks** to toggle filters by Year, Country, and Product Segment
+- **Dynamic Top N Selector** (Revenue, Orders, AOV)
+- **Product Drillthrough Navigation**
+- **Conditional Formatting** and Trendlines to enhance storytelling
+- **Parameter Controls** for simulation and deeper analysis
+
+[Access Live Power BI Dashboard](https://app.powerbi.com/view?r=eyJrIjoiZDJmZjFlODUtZDNkZi00OGZmLThiYTgtYzE1ZWFjZTcxNTg2IiwidCI6ImM2ZTU0OWIzLTVmNDUtNDAzMi1hYWU5LWQ0MjQ0ZGM1YjJjNCJ9)
+
+---
 
 ## 📌 Key Deliverables
 
