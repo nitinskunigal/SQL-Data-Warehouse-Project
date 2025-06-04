@@ -21,9 +21,9 @@ This end-to-end approach mirrors real-world data projects — from raw data to i
 - [🎯 Objective](#-objective)
 - [📋 Business Requirements Gathering (Best-Practice Driven)](#-business-requirements-gathering-best-practice-driven)
 - [🚀 Project Overview](#-project-overview)
-- [🧱 Phase 1: Building the Modern Data Warehouse in SQL Server](phase-1-building-the-modern-data-warehouse-in-sql-server)
-- [📈 Phase 2: EDA and Advanced Data Analytics in SQL Server](phase-2-eda-and-advanced-data-analytics-in-sql-server)
-- [📊 Phase 3: Power BI Dashboards and Business Insights](phase-3-power-bi-dashboards-and-business-insights)
+- [🧱 Phase 1: Building the Modern Data Warehouse in SQL Server](#-phase-1-building-the-modern-data-warehouse-in-sql-server)
+- [📈 Phase 2: EDA and Advanced Data Analytics in SQL Server](#-phase-2-eda-and-advanced-data-analytics-in-sql-server)
+- [📊 Phase 3: Power BI Dashboards and Business Insights](#-phase-3-power-bi-dashboards-and-business-insights)
 - [📌 Key Deliverables](#-key-deliverables)
 - [📎 Future Enhancements](#-future-enhancements)
 
