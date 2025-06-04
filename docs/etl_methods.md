@@ -9,7 +9,7 @@ The ETL pipeline was designed to reflect common enterprise data workflows while 
 ## 📥 Extraction
 
 ### 🔹 Extraction Methods
-- ✅ **Pull Extraction**: The data warehouse pulls the data from source systems (via files).
+- ✅ **Pull Extraction**: The data warehouse actively pulls the data from source systems (via CSV files).
 - ❌ Push Extraction: Not used in this project.
 
 ### 🔹 Extraction Types
@@ -31,16 +31,16 @@ All the following transformation techniques were applied during the project, ali
 - Enhancing datasets with derived KPIs and business logic.
 
 ### 🔹 Data Integration
-- Merging CRM and ERP data into unified customer and product dimensions.
+- Merged ERP and CRM data sources into a unified analytical model.
 
 ### 🔹 Derived Columns
-- Examples include: Age Group, Customer Segment, Product Segment, Recency, Lifespan, AOV, etc.
+- Created meaningful attributes like Age Group, Product Segment, and Lifespan etc.
 
 ### 🔹 Data Normalization & Standardization
-- Mapping and standardizing values (e.g., segment codes to labels).
+- Standardized naming conventions, codes, and categories.
 
 ### 🔹 Business Rules & Logic
-- Calculated columns like Total Orders, Monthly Spend, etc., based on stakeholder use cases.
+- Calculated columns like Total Orders, Monthly Spend, Customer Segmentation (New, Regular, VIP), Product Tiering, etc., based on stakeholder use cases.
 
 ### 🔹 Data Aggregations
 - Performed in the Gold layer to generate summary metrics by customer/product.
@@ -58,18 +58,18 @@ All the following transformation techniques were applied during the project, ali
 ## 📤 Load
 
 ### 🔹 Processing Types
-- ✅ **Batch Processing**: Data loaded in scheduled batches (manual full-load simulation).
+- ✅ **Batch Processing**: Full-batch loads scheduled using SQL scripts and procedures.
 - ❌ Stream Processing: Not used.
 
 ### 🔹 Load Methods
-- ✅ **Full Load**: All tables are truncated and reloaded.
+- ✅ **Full Load**: Target tables are truncated before fresh data is inserted.
 - 🔹 Methods used:
   - **Truncate & Insert**
 - ❌ Upsert, Drop/Create/Insert, Incremental Merge: Not applied.
 
 ### 🔹 Slowly Changing Dimensions (SCD)
 - ✅ **SCD Type 1 (Overwrite)**:
-  - Latest changes overwrite existing records (no historical tracking).
+  - SCD 1 updates dimension records with new values, overwriting older data (no historical tracking).
 - ❌ SCD Type 2 (Historization): Not implemented in this project.
 
 ---
