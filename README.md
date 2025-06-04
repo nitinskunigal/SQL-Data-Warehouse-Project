@@ -184,6 +184,8 @@ And then **visualize these insights** using Power BI by building:
 │   ├── 📄 data_integration.drawio            # Visual representation that depicts how Source Tables are connected
 │   ├── 📄 data_layer_specifications.drawio   # Summarizes the objectives, transformations, and targets of each layer
 │   ├── 📄 data_model.drawio                  # Data model design (e.g., star schema)
+│   ├── 📄 etl_methods.md                     # Brief explanation of ETL types, methods, and the ones that were used in this project
+│   ├── 📄 etl_methods_in_project.png         # ETL mind map depicting types, methods, and the ones that were used in this project
 │   └── 📄 naming_conventions.md              # Consistent Naming guidelines for tables, columns, and files
 
 ├── 📁 scripts/                             # All SQL-based work divided into two main tracks
