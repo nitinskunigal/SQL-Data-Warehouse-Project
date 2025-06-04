@@ -21,9 +21,9 @@ This end-to-end approach mirrors real-world data projects — from raw data to i
 - [🎯 Objective](#-objective)
 - [📋 Business Requirements Gathering (Best-Practice Driven)](#-business-requirements-gathering-best-practice-driven)
 - [🚀 Project Overview](#-project-overview)
-- [🧱 Part 1: Building the Modern Data Warehouse](#-part-1-building-the-modern-data-warehouse)
-- [📈 Part 2: SQL-Based Analytics & Reporting](#-part-2-sql-based-analytics--reporting)
-- [📊 Power BI Dashboards & Business Insights](#-power-bi-dashboards--business-insights)
+- [🧱 Phase 1: Building the Modern Data Warehouse in SQL Server](#-phase-1-building-the-modern-data-warehouse-in-sql-server)
+- [📈 Phase 2: EDA and Advanced Data Analytics in SQL Server](#phase-2-eda-and-advanced-data-analytics-in-sql-server)
+- [📊 Phase 3: Power BI Dashboards and Business Insights](#-phase-3-power-bi-dashboards-and-business-insights)
 - [📌 Key Deliverables](#-key-deliverables)
 - [📎 Future Enhancements](#-future-enhancements)
 
@@ -105,7 +105,7 @@ These questions help define the data ingestion strategy, transformation logic, m
 
 ---
 
-## 🧱 Part 1: Building the Modern Data Warehouse
+## 🧱 Phase 1: Building the Modern Data Warehouse in SQL Server
 
 ### 📌 Objective
 Design and implement a modern data warehouse using **SQL Server** to consolidate and model sales, customer, and product data from multiple source systems, enabling reliable analytical reporting.
@@ -141,7 +141,7 @@ The Gold layer includes star schema views, flat tables, and aggregated objects f
 
 ---
 
-## 📈 Part 2: SQL-Based Analytics & Reporting
+## 📈 Phase 2: SQL-Based EDA and Advanced Data Analytics in SQL Server
 
 ### 📌 Objective
 Uncover key business insights using SQL by performing:
@@ -211,7 +211,7 @@ And then **visualize these insights** using Power BI by building:
 
 ---
 
-## 📊 Power BI Dashboards & Business Insights
+## 📊 Phase 3: Power BI Dashboards and Business Insights
 
 This section demonstrates how the business-ready data from the Gold layer of the data warehouse is brought into Power BI to uncover high-impact insights. The dashboards were designed to reflect real-world business reporting needs and stakeholder storytelling.
 
