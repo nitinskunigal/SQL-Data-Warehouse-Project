@@ -261,21 +261,20 @@ This section demonstrates how the business-ready data from the Gold layer of the
 <summary>📦 <strong>Product Drillthrough Dashboard</strong></summary>
 
 ### 🎯 Focus:
-- Performance deep-dive for selected product
-- Gauges comparing actual vs target for Orders, Revenue, Profit
-- Price sensitivity simulation: Adjusted Profit vs Base Profit
-- Weekly performance trends
+- Deep-dive into performance of a selected product (via drillthrough)
+- Key KPIs: Average Order Revenue and Average Monthly Revenue
+- Price sensitivity simulation: Compare Adjusted vs Base Profit for different price points
+- Dynamic product metric selection to analyze weekly and monthly trends in orders, revenue, or profit
 
 ![Product Drillthrough Screenshot](https://github.com/nitinskunigal/SQL-Data-Warehouse-and-Analytics-Project/blob/main/docs/PBI%20-%20Product%20Drillthrough%20Dashboard.png)
 
 ### 🔍 Key Insights:
-- Products like **Mountain-200 Black-46** underperformed vs targets.
-- With price adjustment simulations, stakeholders can assess impact on profit margins.
-- Weekly trendlines highlight periods of peak and slump for targeted interventions.
+- Profit optimization scenarios allow decision-makers to simulate the financial impact of price changes.
+- Weekly/ monthly metric trends help uncover seasonal dips or campaign performance, guiding better planning.
 
 ### ✅ Recommendations:
-- Optimize pricing to strike a balance between margin and volume.
-- Evaluate promotional timing for products with seasonal or demand dips.
+- Fine-tune product pricing using profit simulations to maximize margin without hurting volume.
+- Schedule promotions around historically low-performing periods to boost sales.
 
 </details>
 
@@ -308,4 +307,4 @@ This section demonstrates how the business-ready data from the Gold layer of the
 
 - Automating incremental loads via Change Data Capture (CDC)
 
-- Introducing historical data for time-trend tracking
+- Introducing historical change tracking via SCD Type 2 for slowly changing dimensions (e.g., customer segment or product category shifts)
