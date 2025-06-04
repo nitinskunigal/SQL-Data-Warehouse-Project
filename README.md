@@ -110,6 +110,14 @@ These questions help define the data ingestion strategy, transformation logic, m
 ### 📌 Objective
 Design and implement a modern data warehouse using **SQL Server** to consolidate and model sales, customer, and product data from multiple source systems, enabling reliable analytical reporting.
 
+### ⚙️ ETL Strategy Used in This Project
+
+The project implements a simplified yet realistic ETL (Extract → Transform → Load) pipeline using **batch-based full extraction and full load** (`truncate & insert`), with transformation steps handled in SQL Server through multiple layers (Bronze → Silver → Gold).
+
+✅ A detailed breakdown of **ETL types, methods, and which ones were used in this project** is available here → [`docs/etl_methods.md`](https://github.com/nitinskunigal/SQL-Data-Warehouse-and-Analytics-Project/blob/main/docs/etl_methods.md)
+
+![ETL Map Thumbnail](https://github.com/nitinskunigal/SQL-Data-Warehouse-and-Analytics-Project/blob/main/docs/etl_methods_in_project.png)
+
 ### 🧭 Architecture: Medallion Approach
 
 | Layer | Purpose | Transformations | Load Type | Object Type |
@@ -118,7 +126,7 @@ Design and implement a modern data warehouse using **SQL Server** to consolidate
 | **Silver** | Clean & standardized data | Cleansing, Normalization, Enrichment | Full load | Tables |
 | **Gold** | Business-ready layer | Integrations, Aggregations, Business Logic | No Load (Views only) | Views |
 
-## 🧱 Data Warehouse Architecture
+### 🧱 Data Warehouse Architecture
 
 ![Data Warehouse Architecture Diagram](https://github.com/nitinskunigal/SQL-Data-Warehouse-and-Analytics-Project/blob/main/docs/data_architecture.drawio.png)
 
@@ -302,6 +310,8 @@ This section demonstrates how the business-ready data from the Gold layer of the
 - **Documentation** for the data model, transformations, and business use cases
 
 - **Power BI Dashboards**, shared online through Power BI Service
+
+---
 
 ## 📎 Future Enhancements
 
