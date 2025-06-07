@@ -173,13 +173,13 @@ Uncover key business insights using SQL by performing:
 │   ├── 📄 data_architecture.drawio           # High-level project architecture (Bronze, Silver, Gold)
 │   ├── 📄 data_catalog.md                    # Catalog of datasets, including field descriptions and metadata 
 │   ├── 📄 data_flow.drawio                   # Visual representation of data flow across layers
-│   ├── 📄 data_flow_tasks.drawio             # Flow of tasks for each layer — ingestion, cleaning, validation, documentation, etc.
+│   ├── 📄 data_flow_tasks.drawio             # Flow of tasks in each layer — analyzing, coding, validating, documenting
 │   ├── 📄 data_integration.drawio            # Visual representation that depicts how Source Tables are connected
 │   ├── 📄 data_layer_specifications.drawio   # Summarizes the objectives, transformations, and targets of each layer
 │   ├── 📄 data_model.drawio                  # Data model design (e.g., star schema)
-│   ├── 📄 etl_methods.md                     # Brief explanation of ETL types, methods, and the ones that were used in this project
-│   ├── 📄 etl_methods_in_project.png         # ETL mind map depicting types, methods, and the ones that were used in this project
-│   └── 📄 naming_conventions.md              # Consistent Naming guidelines for tables, columns, and files
+│   ├── 📄 etl_methods.md                     # Brief explanation of ETL strategy and methods used in this project
+│   ├── 📄 etl_mind_map.png                   # Mind map showing the holistic understanding of ETL
+│   └── 📄 naming_conventions.md              # Consistent naming guidelines for tables, columns, and files
 
 ├── 📁 scripts/                             # All SQL-based work divided into two main tracks
 │
