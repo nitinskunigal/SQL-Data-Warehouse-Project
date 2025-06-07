@@ -147,11 +147,6 @@ Uncover key business insights using SQL by performing:
 - **Advanced Business Analytics**
 - **Segmentation, Performance Tracking, and Trend Detection**
 
-And then **visualize these insights** using Power BI by building:
-- Interactive, filterable dashboards
-- Customer and product-specific drilldowns
-- Dynamic Top-N analysis and What-if simulation controls
-
 ### 🔍 Analysis Topics Covered
 - Customer segmentation and behavior
 - Product performance analysis
