@@ -88,7 +88,7 @@ All the following transformation techniques were applied during the project, ali
 
 To reinforce understanding, here’s the high-level visual map of ETL methods — with checkmarks indicating the techniques used in this project.
 
-![ETL Methods Visual](https://github.com/nitinskunigal/SQL-Data-Warehouse-and-Analytics-Project/blob/main/docs/etl_methods_in_project.png)
+![ETL Methods Visual](https://github.com/nitinskunigal/SQL-Data-Warehouse-and-Analytics-Project/blob/main/docs/etl_mind_map.png)
 
 ---
 
