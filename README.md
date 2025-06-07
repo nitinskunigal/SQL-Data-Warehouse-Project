@@ -166,7 +166,7 @@ Uncover key business insights using SQL by performing:
 ## 🗂️ Repository Structure
 
 ```
-📁 data-warehouse-project/
+📁 data-warehouse-and-analytics-project/
 ├── 📁 datasets/                            # Raw datasets used for the project (ERP and CRM data)
 
 ├── 📁 docs/                                # Project documentation and architecture details
