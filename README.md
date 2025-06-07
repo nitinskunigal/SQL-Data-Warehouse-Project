@@ -19,7 +19,7 @@ This end-to-end approach mirrors real-world data projects — from raw data to i
 - [🏢 Business Overview](#-business-overview)
 - [🎯 Problem Statement](#-problem-statement)
 - [🎯 Objective](#-objective)
-- [📋 Business Requirements Gathering (Best-Practice Driven)](#-business-requirements-gathering-best-practice-driven)
+- [📋 Source System and Business Context Questions (Best-Practice Driven)](#-source-system-and-business-context-questions-best-practice-driven)
 - [🚀 Project Overview](#-project-overview)
 - [🧱 Phase 1: Building the Modern Data Warehouse in SQL Server](#-phase-1-building-the-modern-data-warehouse-in-sql-server)
 - [📈 Phase 2: EDA and Advanced Data Analytics in SQL Server](#-phase-2-eda-and-advanced-data-analytics-in-sql-server)
@@ -65,15 +65,13 @@ The ultimate goal is to create a reusable, scalable data foundation that support
 
 ---
 
-## 📋 Business Requirements Gathering (Best-Practice Driven)
+## 📋 Source System and Business Context Questions (Best-Practice Driven)
 
 Although this is a portfolio project based on hypothetical data and scenarios, it follows real-world best practices that are essential when building a modern data warehouse.
 
 In actual industry projects, understanding the **source systems** and their business context is one of the most critical steps in the data warehousing lifecycle. Below is a curated list of key questions that data engineers and analysts should ask when capturing requirements from business and technical stakeholders.
 
 These questions help define the data ingestion strategy, transformation logic, metadata, and the final analytical model.
-
-### 🔍 Source System & Business Context Questions
 
 - Who owns the data in each system (ERP, CRM, etc.)?
 - What business processes do these systems support (e.g., Sales, Customer Relationship)?
