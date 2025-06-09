@@ -114,7 +114,7 @@ The project implements a simplified yet realistic ETL (Extract → Transform →
 
 ✅ A detailed breakdown of **ETL types, methods, and which ones were used in this project** is available here → [`docs/etl_methods.md`](https://github.com/nitinskunigal/SQL-Data-Warehouse-and-Analytics-Project/blob/main/docs/etl_methods.md)
 
-![ETL Map Thumbnail](https://github.com/nitinskunigal/SQL-Data-Warehouse-and-Analytics-Project/blob/main/docs/etl_methods_in_project.png)
+![ETL Mind Map](https://github.com/nitinskunigal/SQL-Data-Warehouse-and-Analytics-Project/blob/main/docs/etl_mind_map.png)
 
 ### 🧭 Architecture: Medallion Approach
 
