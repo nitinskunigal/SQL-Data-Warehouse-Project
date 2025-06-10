@@ -159,7 +159,6 @@ Uncover key business insights using SQL by performing:
 - Optimized SQL scripts for each theme
 - Business questions addressed through metrics
 - Reusable SQL templates for BI teams
-- Power BI Dashboards
 
 ---
 
