@@ -6,7 +6,7 @@ This project demonstrates the full cycle of a data-driven solution — from buil
 
 The project is structured into **three interconnected phases**, reflecting a full-stack analytics workflow:
 
-1. **Data Engineering** — Design and implementation of a modern data warehouse using SQL Server and the Medallion Architecture
+1. **Data Engineering** — Design and implementation of a scalable data warehouse using SQL Server and the Medallion Architecture
 2. **Data Analytics** — SQL-based exploratory and advanced analytics to uncover customer, product, and sales insights
 3. **Business Intelligence (BI)** — Visualization and storytelling using Power BI, including KPI dashboards, drillthrough reports, and dynamic filtering
 
@@ -21,7 +21,7 @@ This end-to-end approach mirrors real-world data projects — from raw data to i
 - [🎯 Objective](#-objective)
 - [📋 Source System and Business Context Questions (Best-Practice Driven)](#-source-system-and-business-context-questions-best-practice-driven)
 - [🚀 Project Overview](#-project-overview)
-- [🧱 Phase 1: Building the Modern Data Warehouse in SQL Server](#-phase-1-building-the-modern-data-warehouse-in-sql-server)
+- [🧱 Phase 1: Building the scalable Data Warehouse in SQL Server](#-phase-1-building-the-scalable-data-warehouse-in-sql-server)
 - [📈 Phase 2: EDA and Advanced Data Analytics in SQL Server](#-phase-2-eda-and-advanced-data-analytics-in-sql-server)
 - [📊 Phase 3: Power BI Dashboards and Business Insights](#-phase-3-power-bi-dashboards-and-business-insights)
 - [📌 Key Deliverables](#-key-deliverables)
@@ -35,7 +35,7 @@ This project is set in a **hypothetical mid-sized retail company** that sells co
 
 Due to siloed systems and lack of integrated reporting, the company struggles with generating unified insights on product performance, customer behavior, and sales trends.
 
-To address this, a **modern data warehouse** was built using the Medallion Architecture (Bronze, Silver, Gold) in SQL Server, enabling clean, integrated, and business-ready data for analytics.
+To address this, a **scalable data warehouse** was built using the Medallion Architecture (Bronze, Silver, Gold) in SQL Server, enabling clean, integrated, and business-ready data for analytics.
 
 ---
 
@@ -55,7 +55,7 @@ This project solved these problems by:
 
 ## 🎯 Objective
 
-Design and implement a complete **modern data warehousing and analytics pipeline** that:
+Design and implement a complete **scalable data warehousing and analytics pipeline** that:
 
 - Ingests and transforms raw ERP/CRM data
 - Follows best practices using Medallion Architecture
@@ -67,7 +67,7 @@ The ultimate goal is to create a reusable, scalable data foundation that support
 
 ## 📋 Source System and Business Context Questions (Best-Practice Driven)
 
-Although this is a portfolio project based on hypothetical data and scenarios, it follows real-world best practices that are essential when building a modern data warehouse.
+Although this is a portfolio project based on hypothetical data and scenarios, it follows real-world best practices that are essential when building a scalable data warehouse.
 
 In actual industry projects, understanding the **source systems** and their business context is one of the most critical steps in the data warehousing lifecycle. Below is a curated list of key questions that data engineers and analysts should ask when capturing requirements from business and technical stakeholders.
 
@@ -103,10 +103,10 @@ These questions help define the data ingestion strategy, transformation logic, m
 
 ---
 
-## 🧱 Phase 1: Building the Modern Data Warehouse in SQL Server
+## 🧱 Phase 1: Building the scalable Data Warehouse in SQL Server
 
 ### 📌 Objective
-Design and implement a modern data warehouse using **SQL Server** to consolidate and model sales, customer, and product data from multiple source systems, enabling reliable analytical reporting.
+Design and implement a scalable data warehouse using **SQL Server** to consolidate and model sales, customer, and product data from multiple source systems, enabling reliable analytical reporting.
 
 ### ⚙️ ETL Strategy Used in This Project
 
@@ -295,7 +295,7 @@ This section demonstrates how the business-ready data from the Gold layer of the
 
 ## 📌 Key Deliverables
 
-- A fully functional, SQL Server-based **modern data warehouse**
+- A fully functional, SQL Server-based **scalable data warehouse**
 
 - Layered architecture following **industry-standard Medallion principles**
 
