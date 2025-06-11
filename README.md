@@ -295,15 +295,19 @@ This section demonstrates how the business-ready data from the Gold layer of the
 
 ## 📌 Key Deliverables
 
-- A fully functional, SQL Server-based **scalable data warehouse**
+- A fully functional, SQL Server-based **scalable data warehouse** following industry-standard **layered Medallion Architecture**
 
-- Layered architecture following **industry-standard Medallion principles**
+- Clean and reusable **[SQL scripts](https://github.com/nitinskunigal/SQL-Data-Warehouse-and-Analytics-Project/tree/main/scripts)** for analytics
 
-- Clean and reusable **SQL scripts** for analytics
+- **[QA Scripts](https://github.com/nitinskunigal/SQL-Data-Warehouse-and-Analytics-Project/tree/main/tests)** for Silver and Gold Layers
 
-- **Documentation** for the data model, transformations, and business use cases
+- **[Documentation](https://github.com/nitinskunigal/SQL-Data-Warehouse-and-Analytics-Project/tree/main/docs)** for data architecture diagrams, ETL flow, data model, data catalog, data layer specifications, etc.
 
-- **Power BI Dashboards**, shared online through Power BI Service
+- **[Power BI Dashboards](https://app.powerbi.com/view?r=eyJrIjoiNDdlNTViNmItZDZkNC00N2FkLWE2N2EtYzdjOWZkOGIwNTRiIiwidCI6ImM2ZTU0OWIzLTVmNDUtNDAzMi1hYWU5LWQ0MjQ0ZGM1YjJjNCJ9)**, shared online through Power BI Service
+
+- **[Video Walkthrough](https://www.youtube.com/watch?v=Kspob_lGIaA&t=429s)** of this Project
+
+- **[Presentation Deck](https://github.com/nitinskunigal/SQL-Data-Warehouse-and-Analytics-Project/blob/main/docs/data_warehouse_and_analytics_project_presentation.pdf)**
 
 ---
 
