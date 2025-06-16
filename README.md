@@ -137,6 +137,9 @@ The Gold layer includes star schema views, flat tables, and aggregated objects f
 - **ERP System** — Product and sales transactions
 - **CRM System** — Customer data and engagement records
 
+### 💡 Why No SSIS?
+SSIS (SQL Server Integration Services) is a powerful ETL tool commonly used in enterprise setups, but it wasn't needed in this project. Since the data sources were flat files (CSV), I opted for a lightweight SQL-based approach using stored procedures, views, and the Medallion Architecture (Bronze → Silver → Gold). This kept the ETL process transparent, flexible, and easier to track inside SQL Server without requiring additional tooling.
+
 ---
 
 ## 📈 Phase 2: SQL-Based EDA and Advanced Data Analytics in SQL Server
@@ -205,7 +208,7 @@ Uncover key business insights using SQL by performing:
 
 ## 📊 Phase 3: Power BI Dashboards and Business Insights
 
-This section demonstrates how the business-ready data from the Gold layer of the data warehouse is brought into Power BI to uncover high-impact insights. The dashboards were designed to reflect real-world business reporting needs and stakeholder storytelling.
+This section demonstrates how business-ready data from the Gold layer of the SQL data warehouse was connected to Power BI to uncover high-impact insights. I designed three interactive dashboards — Executive Overview, Customer Analysis, and Product Drillthrough — to simulate real-world reporting use cases. These dashboards were built with self-service BI in mind: stakeholders can explore data using filters, slicers, and drillthrough actions without needing to write SQL or request custom reports. The goal was to enable insight delivery at scale while keeping the analytical model standardized and governed.
 
 ---
 
