@@ -193,7 +193,8 @@ Uncover key business insights using SQL by performing:
 
 ├── 📁 docs/                                # Project documentation and architecture details
 │   ├── 📄 data_architecture.drawio           # High-level project architecture (Bronze, Silver, Gold)
-│   ├── 📄 data_catalog.md                    # Catalog of datasets, including field descriptions and metadata 
+│   ├── 📄 data_catalog.md                    # Catalog of datasets, including field descriptions and metadata
+│   ├── 📄 data_cleaning_transformation.md    # Outlines the key data cleaning and transformation techniques
 │   ├── 📄 data_flow.drawio                   # Visual representation of data flow across layers
 │   ├── 📄 data_flow_tasks.drawio             # Flow of tasks in each layer — analyzing, coding, validating, documenting
 │   ├── 📄 data_integration.drawio            # Visual representation that depicts how Source Tables are connected
@@ -202,6 +203,7 @@ Uncover key business insights using SQL by performing:
 │   ├── 📄 etl_methods.md                     # Brief explanation of ETL strategy and methods used in this project
 │   ├── 📄 etl_mind_map.png                   # Mind map showing the holistic understanding of ETL
 │   └── 📄 naming_conventions.md              # Consistent naming guidelines for tables, columns, and files
+│   ├── 📄 project_presentation.pdf           # Presentation deck related to this project
 
 ├── 📁 scripts/                             # All SQL-based work divided into two main tracks
 │
