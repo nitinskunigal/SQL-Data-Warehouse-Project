@@ -156,6 +156,10 @@ The Gold layer includes star schema views, flat tables, and aggregated objects f
 ### 💡 Why No SSIS?
 SSIS (SQL Server Integration Services) is a powerful ETL tool commonly used in enterprise setups, but it wasn't needed in this project. Since the data sources were flat files (CSV), I opted for a lightweight SQL-based approach using stored procedures, views, and the Medallion Architecture (Bronze → Silver → Gold). This kept the ETL process transparent, flexible, and easier to track inside SQL Server without requiring additional tooling.
 
+### 🔄 Automating the ETL Process
+
+To simulate a production-ready ETL pipeline, the stored procedures responsible for data ingestion (Bronze Layer) and data transformation (Silver Layer) were automated using .bat scripting and **Windows Task Scheduler**. Since SQL Server Express Edition doesn’t support SQL Server Agent, the scheduling was instead handled using .bat scripts and Windows Task Scheduler — a lightweight, low-overhead alternative commonly used for local development and proof-of-concept projects. This setup mimics how real-world ETL jobs are orchestrated, allowing the entire data refresh cycle — from loading raw CSV files to producing clean, analytics-ready tables — to run without manual intervention.
+
 ---
 
 ## 📈 Phase 2: SQL-Based EDA and Advanced Data Analytics in SQL Server
@@ -225,6 +229,12 @@ Uncover key business insights using SQL by performing:
 ## 📊 Phase 3: Power BI Dashboards and Business Insights
 
 This section demonstrates how business-ready data from the Gold layer of the SQL data warehouse was connected to Power BI to uncover high-impact insights. I designed three interactive dashboards — Executive Overview, Customer Analysis, and Product Drillthrough — to simulate real-world reporting use cases. These dashboards were built with self-service BI in mind: stakeholders can explore data using filters, slicers, and drillthrough actions without needing to write SQL or request custom reports. The goal was to enable insight delivery at scale while keeping the analytical model standardized and governed.
+
+### 🔁 Power BI Auto-Refresh Simulation
+
+The automation pipeline was extended to the reporting layer by connecting the published Power BI dashboards to the **On-Premises Gateway** and enabling scheduled refresh. This ensured that any updates made at the source level were automatically reflected in the visuals — allowing stakeholders to always work with the most current data without triggering manual refreshes. 
+
+Together with the backend automation, this project simulates an end-to-end production workflow — from source ingestion to real-time dashboard refresh — using industry-aligned best practices.
 
 ---
 
