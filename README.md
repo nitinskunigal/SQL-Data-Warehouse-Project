@@ -19,7 +19,7 @@ This end-to-end approach mirrors real-world data projects — from raw data to i
 - [🏢 Business Overview](#-business-overview)
 - [🎯 Problem Statement](#-problem-statement)
 - [🎯 Objective](#-objective)
-- [📋 Source System and Business Context Questions (Best-Practice Driven)](#-source-system-and-business-context-questions-best-practice-driven)
+- [📋 Stakeholder Requirements and Source System Understanding](#-stakeholder-requirements-and-source-system-understanding)
 - [🚀 Project Overview](#-project-overview)
 - [🧱 Phase 1: Building the scalable Data Warehouse in SQL Server](#-phase-1-building-the-scalable-data-warehouse-in-sql-server)
 - [📈 Phase 2: EDA and Advanced Data Analytics in SQL Server](#-phase-2-eda-and-advanced-data-analytics-in-sql-server)
@@ -65,30 +65,46 @@ The ultimate goal is to create a reusable, scalable data foundation that support
 
 ---
 
-## 📋 Source System and Business Context Questions (Best-Practice Driven)
+## 📋 Stakeholder Requirements and Source System Understanding
 
-Although this is a portfolio project based on hypothetical data and scenarios, it follows real-world best practices that are essential when building a scalable data warehouse.
+Although this is a portfolio project based on fictional data and simulated context, it closely mirrors how real-world analytics projects are initiated—by capturing stakeholder requirements and understanding the technical landscape of the source systems involved.
 
-In actual industry projects, understanding the **source systems** and their business context is one of the most critical steps in the data warehousing lifecycle. Below is a curated list of key questions that data engineers and analysts should ask when capturing requirements from business and technical stakeholders.
+In real-world scenarios, designing a scalable data warehouse begins with two parallel tracks:
 
-These questions help define the data ingestion strategy, transformation logic, metadata, and the final analytical model.
+- **Stakeholder Collaboration**: Framing business questions and converting stakeholder needs into user stories (here simulated in JIRA) to define KPIs, reporting expectations, and pain points in existing workflows.
 
-- Who owns the data in each system (ERP, CRM, etc.)?
-- What business processes do these systems support (e.g., Sales, Customer Relationship)?
-- What are the data formats and storage mechanisms (CSV, SQL Server, Oracle, cloud storage)?
-- What are the integration capabilities? (API, file extracts, direct DB access, streaming tools like Kafka?)
-- What is the authentication or access control mechanism? (Tokens, VPN, SSH, whitelisting?)
+- **Source System Analysis**: Understanding the structure, limitations, and integration options of the systems holding the raw data (e.g., ERP, CRM).
+
+To simulate this process, the project used a list of best-practice discovery questions that would typically be explored in stakeholder workshops and technical walkthroughs. These questions shape everything from ingestion and transformation logic to the architecture of reporting layers.
+
+#### Key questions used to drive requirement gathering:
+
+- Who owns the data in each source system (ERP, CRM, etc.)?
+- What business processes do these systems support (e.g., Sales, Customer Retention)?
+- What data formats and storage mechanisms are in place (CSV, SQL Server, Oracle, cloud storage)?
+- What are the integration capabilities? (API, file extracts, direct DB access, Kafka, etc.)
+- What authentication/access controls are required? (Tokens, VPN, SSH, whitelisting)
 - What are the peak load times or usage periods for these systems?
-- What is the frequency of data refresh or updates (daily, hourly, real-time)?
-- Do we require full loads or incremental (delta) loads?
+- What is the data refresh frequency — daily, hourly, or real-time?
+- Should we implement full loads or delta (incremental) loads?
 - How large are the typical data extracts? Are there any volume constraints?
-- Are there known issues with data quality or completeness?
-- What fields are most critical for business reporting and KPIs?
-- How do we validate the correctness of the data post-ingestion?
-- What level of historization is required (if any)?
-- What are the reporting pain points that a data warehouse is expected to solve?
+- Are there known data quality, consistency, or completeness issues?
+- Which fields are business-critical for KPIs and reporting?
+- How will we validate data correctness post-ingestion?
+- What level of historization (Type 1 vs. Type 2) is required?
+- What are the reporting pain points that this data warehouse is expected to solve?
 
-📌 *These questions help ensure that the design of the Bronze, Silver, and Gold layers aligns with both business needs and technical feasibility.*
+📌 *Together, these stakeholder-driven stories and system-level insights informed the design of the Medallion Architecture (Bronze → Silver → Gold), ensuring technical feasibility and business relevance were aligned from the very beginning.*
+
+#### 🧾 Sample User Stories & Acceptance Criteria (JIRA-Style)
+
+Here are a few example user stories created as part of the stakeholder requirement mapping process (simulated in JIRA):
+
+| **User Story** | **Persona** | **Acceptance Criteria** |
+|----------------|-------------|--------------------------|
+| **As a COO**, I want to monitor YoY revenue and profit trends so that I can evaluate overall business performance and spot strategic inflection points. | Executive Leadership | The dashboard must:<br>• Display monthly and yearly revenue/profit trends<br>• Include AOV and order volume KPIs<br>• Provide slicers for region and product category |
+| **As a Marketing Analyst**, I want to segment customers by recency and frequency so that I can identify dormant vs. high-engagement segments. | Marketing/CRM Team | The dashboard must:<br>• Group customers by recency and frequency bands<br>• Show Avg. Revenue per Customer<br>• Support filtering by acquisition year |
+| **As a Product Manager**, I want to compare product categories by revenue and profit so that I can prioritize which SKUs to promote or discount. | Merchandising/Product Team | The dashboard must:<br>• Show revenue, profit, and margin by product category<br>• Include drillthrough to individual product-level metrics<br>• Enable scenario simulation (e.g., what-if pricing) |
 
 ---
 
