@@ -77,7 +77,7 @@ In real-world scenarios, designing a scalable data warehouse begins with two par
 
 To simulate this process, the project used a list of best-practice discovery questions that would typically be explored in stakeholder workshops and technical walkthroughs. These questions shape everything from ingestion and transformation logic to the architecture of reporting layers.
 
-#### Key questions used to drive requirement gathering:
+### Key questions used to drive requirement gathering:
 
 - Who owns the data in each source system (ERP, CRM, etc.)?
 - What business processes do these systems support (e.g., Sales, Customer Retention)?
@@ -96,15 +96,15 @@ To simulate this process, the project used a list of best-practice discovery que
 
 📌 *Together, these stakeholder-driven stories and system-level insights informed the design of the Medallion Architecture (Bronze → Silver → Gold), ensuring technical feasibility and business relevance were aligned from the very beginning.*
 
-#### 🧾 Sample User Stories & Acceptance Criteria (JIRA-Style)
+### Sample User Stories & Acceptance Criteria
 
 Here are a few example user stories created as part of the stakeholder requirement mapping process (simulated in JIRA):
 
 | **User Story** | **Persona** | **Acceptance Criteria** |
 |----------------|-------------|--------------------------|
-| **As a COO**, I want to monitor YoY revenue and profit trends so that I can evaluate overall business performance and spot strategic inflection points. | Executive Leadership | The dashboard must:<br>• Display monthly and yearly revenue/profit trends<br>• Include AOV and order volume KPIs<br>• Provide slicers for region and product category |
-| **As a Marketing Analyst**, I want to segment customers by recency and frequency so that I can identify dormant vs. high-engagement segments. | Marketing/CRM Team | The dashboard must:<br>• Group customers by recency and frequency bands<br>• Show Avg. Revenue per Customer<br>• Support filtering by acquisition year |
-| **As a Product Manager**, I want to compare product categories by revenue and profit so that I can prioritize which SKUs to promote or discount. | Merchandising/Product Team | The dashboard must:<br>• Show revenue, profit, and margin by product category<br>• Include drillthrough to individual product-level metrics<br>• Enable scenario simulation (e.g., what-if pricing) |
+| **As a COO**, I want to monitor YoY revenue and profit trends so that I can evaluate overall business performance and spot strategic inflection points. | Executive Leadership | The dashboard must:<br>• Display YoY Revenue, Profit, Orders, and AOV with % change<br>• Include monthly revenue trends and a dynamic Top N product matrix<br>• Allow filtering by product category and subcategory<br>• Include a slicer panel containing slicers for year, country, and product segment  |
+| **As a Customer Success Analyst**, I want to identify top customers by revenue and analyze their spend behavior so that I can tailor retention campaigns. | Marketing / CRM Team | The dashboard must:<br>• Show Top 100 customers with revenue, orders, and AOV<br>• Display KPIs: Revenue per Customer, Average Order per Customer, and Avg Monthly Spend<br>• Include a line chart switching between total customers and revenue per customer<br>• Include donut charts for segment-wise order and revenue distribution |
+| **As a Product Manager**, I want to analyze individual product performance and simulate price changes so that I can make more informed pricing decisions. | Merchandising / Product Team | The dashboard must:<br>• Enable drillthrough to selected products<br>• Display metrics like Avg Order Revenue, Monthly Revenue, and Price Sensitivity<br>• Allow simulation of profit impact through What-If scenarios |
 
 ---
 
