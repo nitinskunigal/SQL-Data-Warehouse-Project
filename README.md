@@ -193,8 +193,10 @@ Uncover key business insights using SQL by performing:
 
 ├── 📁 docs/                                # Project documentation and architecture details
 │   ├── 📄 data_architecture.drawio           # High-level project architecture (Bronze, Silver, Gold)
-│   ├── 📄 data_catalog.md                    # Catalog of datasets, including field descriptions and metadata
+│   ├── 📄 data_catalog_source_system.md      # Captures essential metadata of source systems
+│   ├── 📄 data_catalog_source_system.xlx     # Data Catalog in Excel sheet format
 │   ├── 📄 data_cleaning_transformation.md    # Outlines the key data cleaning and transformation techniques
+│   ├── 📄 data_dictionary.md                 # Provides detailed metadata for each column in the business-ready tables
 │   ├── 📄 data_flow.drawio                   # Visual representation of data flow across layers
 │   ├── 📄 data_flow_tasks.drawio             # Flow of tasks in each layer — analyzing, coding, validating, documenting
 │   ├── 📄 data_integration.drawio            # Visual representation that depicts how Source Tables are connected
