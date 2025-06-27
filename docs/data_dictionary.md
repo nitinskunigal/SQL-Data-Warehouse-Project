@@ -1,7 +1,7 @@
-# Data Catalog for Gold Layer
+# Data Dictionary for Gold Layer
 
 ## Overview
-The Gold Layer is the business-level data representation, structured to support analytical and reporting use cases. It consists of **dimension tables** and **fact tables** for specific business metrics.
+The Gold Layer is the business-level data representation, structured to support analytical and reporting use cases. It consists of **dimension tables** and **fact tables** for specific business metrics. This document serves as a **data dictionary** for the Gold Layer, providing detailed metadata for each column in the business-ready tables.
 
 ---
 
