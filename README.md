@@ -16,7 +16,6 @@ This end-to-end approach mirrors real-world data projects — from raw data to i
 
 ## 📚 Table of Contents
 
-- [🏢 Business Overview](#-business-overview)
 - [🎯 Problem Statement](#-problem-statement)
 - [🎯 Objective](#-objective)
 - [📋 Stakeholder Requirements and Source System Understanding](#-stakeholder-requirements-and-source-system-understanding)
@@ -29,27 +28,13 @@ This end-to-end approach mirrors real-world data projects — from raw data to i
 
 ---
 
-## 🏢 Business Overview
+## 🎯 Problem Statement
 
 This project is set in a **hypothetical mid-sized retail company** that sells consumer goods across multiple channels (e.g., online and in-store). The company uses a **CRM system** to track sales transactions along with core details of products and customers, and an **ERP system** to manage extended/ additional details of customers and products.
 
 Due to siloed systems and lack of integrated reporting, the company struggles with generating unified insights on product performance, customer behavior, and sales trends.
 
 To address this, a **scalable data warehouse** was built using the Medallion Architecture (Bronze, Silver, Gold) in SQL Server, enabling clean, integrated, and business-ready data for analytics.
-
----
-
-## 🎯 Problem Statement
-
-The company faced challenges such as:
-- Fragmented data across ERP and CRM systems
-- Manual reporting processes with inconsistent metrics
-- Inability to track customer behavior or product sales holistically
-
-This project solved these problems by:
-- Consolidating data from both systems into a structured data warehouse
-- Cleaning, transforming, and modeling the data for analytical use
-- Enabling rich SQL-based exploratory analysis for business decision-making
 
 ---
 
