@@ -55,6 +55,20 @@ To address this challenge, a complete **scalable data warehousing and analytics 
 
 ---
 
+## Business Impact
+
+Although based on fictional data, this project reflects realistic business scenarios and demonstrates how data-driven solutions can address operational inefficiencies and strategic blind spots.
+
+By consolidating fragmented ERP and CRM data into a centralized warehouse, the solution created a **single source of truth** — significantly reducing manual reporting and enabling cross-departmental alignment. The dashboards empowered decision-makers to:
+
+- Monitor real-time KPIs like revenue, AOV, and product profitability
+- Identify gaps in customer retention and order quality
+- Simulate pricing scenarios to optimize profit margins
+
+This project also showcased how full-stack analytics — from data warehousing to visualization — can accelerate insight delivery, reduce manual effort, and improve the accuracy of decision-making across the business.
+
+---
+
 ## Stakeholder Requirements and Source System Understanding
 
 Although this is a portfolio project based on fictional data and simulated context, it closely mirrors how real-world analytics projects are initiated—by capturing stakeholder requirements and understanding the technical landscape of the source systems involved.
@@ -139,6 +153,13 @@ SSIS (SQL Server Integration Services) is a powerful ETL tool commonly used in e
 
 To simulate a production-ready ETL pipeline, the stored procedures responsible for data ingestion (Bronze Layer) and data transformation (Silver Layer) were automated using .bat scripting and **Windows Task Scheduler**. Since SQL Server Express Edition doesn’t support SQL Server Agent, the scheduling was instead handled using .bat scripts and Windows Task Scheduler — a lightweight, low-overhead alternative commonly used for local development and proof-of-concept projects. This setup mimics how real-world ETL jobs are orchestrated, allowing the entire data refresh cycle — from loading raw CSV files to producing clean, analytics-ready tables — to run without manual intervention.
 
+### Challenges Faced
+
+- **Data Quality Issues**: The ERP and CRM files contained inconsistent formatting, duplicates, missing values, non-standard codes (e.g., gender, country, dates), etc. Resolving these while preserving integrity was a time-consuming but essential task.
+- **Complex Business Logic**: Columns like `product_end_date`, derived through forward-looking logic, and pricing backfills needed iterative debugging to ensure business correctness.
+- **ETL Automation with Constraints**: Due to limitations in SQL Server Express (no SQL Agent), ETL orchestration had to be mimicked using `.bat` scripts and Task Scheduler — simulating real-world job automation within tooling constraints.
+- **Maintaining Reusability**: Keeping stored procedures modular and auditable required deliberate structuring to ensure transformations were transparent and traceable.
+
 ---
 
 ## Phase 2: SQL-Based EDA and Advanced Data Analytics in SQL Server
@@ -161,6 +182,12 @@ Uncover key business insights using SQL by performing:
 - Optimized SQL scripts for each theme
 - Business questions addressed through metrics
 - Reusable SQL templates for BI teams
+
+### Challenges Faced
+
+- **Interpreting Business Context**: Deriving meaning from raw transactional data required simulating stakeholder intent — e.g., identifying whether a drop in AOV signals a pricing issue or customer churn.
+- **Balancing Granularity and Performance**: Writing performant SQL queries using CTEs and window functions across 29M+ in revenue while preserving granularity for trend analysis was critical.
+- **Bias in Metrics**: Understanding how over-weighting new customer orders could skew retention analysis helped simulate realistic pitfalls an analyst might face.
 
 ---
 
@@ -219,8 +246,6 @@ The automation pipeline was extended to the reporting layer by connecting the pu
 
 Together with the backend automation, this project simulates an end-to-end production workflow — from source ingestion to real-time dashboard refresh — using industry-aligned best practices.
 
----
-
 <details>
 <summary> <strong>Executive Dashboard</strong></summary>
 
@@ -243,8 +268,6 @@ Together with the backend automation, this project simulates an end-to-end produ
 - Monitor inventory and fulfillment capacity to manage volume efficiently.
 
 </details>
-
----
 
 <details>
 <summary> <strong>Customer Dashboard</strong></summary>
@@ -269,8 +292,6 @@ Together with the backend automation, this project simulates an end-to-end produ
 
 </details>
 
----
-
 <details>
 <summary> <strong>Product Drillthrough Dashboard</strong></summary>
 
@@ -291,6 +312,11 @@ Together with the backend automation, this project simulates an end-to-end produ
 - Schedule promotions around historically low-performing periods to boost sales.
 
 </details>
+
+### Challenges Faced
+
+- **Designing for Personas**: Creating dashboards that align with the mental models of executives, marketers, and product managers was a balancing act — what’s insightful to one persona may overwhelm another.
+- **Governance Considerations**: Though not implemented here, designing with future scalability in mind meant understanding how row-level security and role-based access would apply in an enterprise context.
 
 ---
 
