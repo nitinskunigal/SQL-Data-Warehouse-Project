@@ -151,13 +151,13 @@ SSIS (SQL Server Integration Services) is a powerful ETL tool commonly used in e
 
 ### Automating the ETL Process
 
-To simulate a production-ready ETL pipeline, the stored procedures responsible for data ingestion (Bronze Layer) and data transformation (Silver Layer) were automated using .bat scripting and **Windows Task Scheduler**. Since SQL Server Express Edition doesn’t support SQL Server Agent, the scheduling was instead handled using batch scripts and Windows Task Scheduler — a lightweight, low-overhead alternative commonly used for local development and proof-of-concept projects. This setup mimics how real-world ETL jobs are orchestrated, allowing the entire data refresh cycle — from loading raw CSV files to producing clean, analytics-ready tables — to run without manual intervention.
+To simulate a production-ready ETL pipeline, the stored procedures responsible for data ingestion (Bronze Layer) and data transformation (Silver Layer) were automated using batch scripting and **Windows Task Scheduler**. Since SQL Server Express Edition doesn’t support SQL Server Agent, the scheduling was instead handled using batch scripts and Windows Task Scheduler — a lightweight, low-overhead alternative commonly used for local development and proof-of-concept projects. This setup mimics how real-world ETL jobs are orchestrated, allowing the entire data refresh cycle — from loading raw CSV files to producing clean, analytics-ready tables — to run without manual intervention.
 
 ### Challenges Faced / Lessons Learned
 
 - **Data Quality Issues**: The ERP and CRM files contained inconsistent formatting, duplicates, missing values, nulls, and non-standard codes like gender and country, which made data cleaning highly detail-oriented.
 - **Complex Business Logic**: Applied forward-looking logic and enriched product end dates using future start dates. I also applied data backfilling logic to missing sales or pricing fields. Both of these instances needed iterative debugging to ensure business correctness.
-- **ETL Automation with Constraints**: Due to limitations in SQL Server Express (no SQL Agent), ETL orchestration had to be mimicked using `.bat` scripts and Task Scheduler — simulating real-world job automation within tooling constraints.
+- **ETL Automation with Constraints**: Due to limitations in SQL Server Express (no SQL Agent), ETL orchestration had to be mimicked using batch scripts and Task Scheduler — simulating real-world job automation within tooling constraints.
 - **Maintaining Reusability**: Keeping stored procedures modular and auditable required deliberate structuring to ensure transformations were transparent and traceable.
 
 ---
