@@ -18,8 +18,8 @@ This end-to-end approach mirrors real-world data projects — from raw data to i
 
 - [🎯 Problem Statement](#-problem-statement)
 - [🎯 Objective](#-objective)
-- [📋 Stakeholder Requirements and Source System Understanding](#-stakeholder-requirements-and-source-system-understanding)
 - [🚀 Project Overview](#-project-overview)
+- [📋 Stakeholder Requirements and Source System Understanding](#-stakeholder-requirements-and-source-system-understanding)
 - [🧱 Phase 1: Building the scalable Data Warehouse in SQL Server](#-phase-1-building-the-scalable-data-warehouse-in-sql-server)
 - [📈 Phase 2: EDA and Advanced Data Analytics in SQL Server](#-phase-2-eda-and-advanced-data-analytics-in-sql-server)
 - [📊 Phase 3: Power BI Dashboards and Business Insights](#-phase-3-power-bi-dashboards-and-business-insights)
@@ -40,13 +40,18 @@ To address this, a **scalable data warehouse** was built using the Medallion Arc
 
 ## 🎯 Objective
 
-Design and implement a complete **scalable data warehousing and analytics pipeline** that:
+To address this challenge, a complete **scalable data warehousing and analytics pipeline** is designed and implemented using the Medallion Architecture (Bronze, Silver, Gold) in SQL Server, enabling clean, integrated, and business-ready data for analytics. The ultimate goal is to create a reusable, scalable data foundation that supports business intelligence, reporting, and data science use cases.
 
-- Ingests and transforms raw ERP/CRM data
-- Follows best practices using Medallion Architecture
-- Supports SQL-driven insights for product, sales, and customer analysis
+---
 
-The ultimate goal is to create a reusable, scalable data foundation that supports business intelligence, reporting, and data science use cases.
+## 🚀 Project Overview
+
+| Aspect | Description |
+|--------|-------------|
+| **Tech Stack** | SQL Server, T-SQL, Stored Procedures, Views |
+| **Architecture** | Medallion Architecture (Bronze, Silver, Gold Layers) |
+| **Data Sources** | ERP and CRM data in CSV format |
+| **Objective** | Build a business-ready data warehouse in SQL Server, extract meaningful insights using SQL, and visualize those insights in Power BI |
 
 ---
 
@@ -90,17 +95,6 @@ Here are a few example user stories created as part of the stakeholder requireme
 | **As a COO**, I want to monitor YoY revenue and profit trends so that I can evaluate overall business performance and spot strategic inflection points. | Executive Leadership | The dashboard must:<br>• Display YoY Revenue, Profit, Orders, and AOV with % change<br>• Include monthly revenue trends and a dynamic Top N product matrix<br>• Allow filtering by product category and subcategory<br>• Include a slicer panel containing slicers for year, country, and product segment  |
 | **As a Customer Success Analyst**, I want to identify top customers by revenue and analyze their spend behavior so that I can tailor retention campaigns. | Marketing / CS Team | The dashboard must:<br>• Show Top 100 customers with revenue, orders, and AOV<br>• Display KPIs: Revenue per Customer, Average Order per Customer, and Avg Monthly Spend<br>• Include a line chart switching between total customers and revenue per customer<br>• Include donut charts for segment-wise order and revenue distribution |
 | **As a Product Manager**, I want to analyze individual product performance and simulate price changes so that I can make more informed pricing decisions. | Merchandising / Product Team | The dashboard must:<br>• Enable drillthrough to selected products<br>• Display metrics like Avg Order Revenue, Monthly Revenue, and Price Sensitivity<br>• Allow simulation of profit impact through What-If scenarios |
-
----
-
-## 🚀 Project Overview
-
-| Aspect | Description |
-|--------|-------------|
-| **Tech Stack** | SQL Server, T-SQL, Stored Procedures, Views |
-| **Architecture** | Medallion Architecture (Bronze, Silver, Gold Layers) |
-| **Data Sources** | ERP and CRM data in CSV format |
-| **Objective** | Build a business-ready data warehouse in SQL Server, extract meaningful insights using SQL, and visualize those insights by building Power BI Dashboards |
 
 ---
 
