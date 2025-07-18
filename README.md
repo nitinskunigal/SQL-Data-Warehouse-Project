@@ -14,21 +14,21 @@ This end-to-end approach mirrors real-world data projects — from raw data to i
 
 ---
 
-## 📚 Table of Contents
+## Table of Contents
 
-- [🎯 Problem Statement](#-problem-statement)
-- [🎯 Objective](#-objective)
-- [🚀 Project Overview](#-project-overview)
-- [📋 Stakeholder Requirements and Source System Understanding](#-stakeholder-requirements-and-source-system-understanding)
-- [🧱 Phase 1: Building the scalable Data Warehouse in SQL Server](#-phase-1-building-the-scalable-data-warehouse-in-sql-server)
-- [📈 Phase 2: EDA and Advanced Data Analytics in SQL Server](#-phase-2-eda-and-advanced-data-analytics-in-sql-server)
-- [📊 Phase 3: Power BI Dashboards and Business Insights](#-phase-3-power-bi-dashboards-and-business-insights)
-- [📌 Key Deliverables](#-key-deliverables)
-- [📎 Future Enhancements](#-future-enhancements)
+- [Problem Statement](#problem-statement)
+- [Objective](#objective)
+- [Project Overview](#project-overview)
+- [Stakeholder Requirements and Source System Understanding](#stakeholder-requirements-and-source-system-understanding)
+- [Phase 1: Building the scalable Data Warehouse in SQL Server](#phase-1-building-the-scalable-data-warehouse-in-sql-server)
+- [Phase 2: EDA and Advanced Data Analytics in SQL Server](#phase-2-eda-and-advanced-data-analytics-in-sql-server)
+- [Phase 3: Power BI Dashboards and Business Insights](#phase-3-power-bi-dashboards-and-business-insights)
+- [Key Deliverables](#key-deliverables)
+- [Future Enhancements](#future-enhancements)
 
 ---
 
-## 🎯 Problem Statement
+## Problem Statement
 
 This project is set in a **hypothetical mid-sized retail company** that sells consumer goods across multiple channels (e.g., online and in-store). The company uses a **CRM system** to track sales transactions along with core details of products and customers, and an **ERP system** to manage extended/ additional details of customers and products.
 
@@ -38,13 +38,13 @@ To address this, a **scalable data warehouse** was built using the Medallion Arc
 
 ---
 
-## 🎯 Objective
+## Objective
 
 To address this challenge, a complete **scalable data warehousing and analytics pipeline** is designed and implemented using the Medallion Architecture (Bronze, Silver, Gold) in SQL Server, enabling clean, integrated, and business-ready data for analytics. The ultimate goal is to create a reusable, scalable data foundation that supports business intelligence, reporting, and data science use cases.
 
 ---
 
-## 🚀 Project Overview
+## Project Overview
 
 | Aspect | Description |
 |--------|-------------|
@@ -55,7 +55,7 @@ To address this challenge, a complete **scalable data warehousing and analytics 
 
 ---
 
-## 📋 Stakeholder Requirements and Source System Understanding
+## Stakeholder Requirements and Source System Understanding
 
 Although this is a portfolio project based on fictional data and simulated context, it closely mirrors how real-world analytics projects are initiated—by capturing stakeholder requirements and understanding the technical landscape of the source systems involved.
 
@@ -84,7 +84,7 @@ To simulate this process, the project used a list of best-practice discovery que
 - What level of historization (Type 1 vs. Type 2) is required?
 - What are the reporting pain points that this data warehouse is expected to solve?
 
-📌 *Together, these stakeholder-driven stories and system-level insights informed the design of the Medallion Architecture (Bronze → Silver → Gold), ensuring technical feasibility and business relevance were aligned from the very beginning.*
+*Together, these stakeholder-driven stories and system-level insights informed the design of the Medallion Architecture (Bronze → Silver → Gold), ensuring technical feasibility and business relevance were aligned from the very beginning.*
 
 ### Sample User Stories & Acceptance Criteria
 
@@ -98,12 +98,12 @@ Here are a few example user stories created as part of the stakeholder requireme
 
 ---
 
-## 🧱 Phase 1: Building the scalable Data Warehouse in SQL Server
+## Phase 1: Building the scalable Data Warehouse in SQL Server
 
-### 📌 Objective
+### Objective
 Design and implement a scalable data warehouse using **SQL Server** to consolidate and model sales, customer, and product data from multiple source systems, enabling reliable analytical reporting.
 
-### ⚙️ ETL Strategy Used in This Project
+### ETL Strategy Used in This Project
 
 The project implements a simplified yet realistic ETL (Extract → Transform → Load) pipeline using **batch-based full extraction and full load** (`truncate & insert`), with transformation steps handled in SQL Server through multiple layers (Bronze → Silver → Gold).
 
@@ -111,7 +111,7 @@ The project implements a simplified yet realistic ETL (Extract → Transform →
 
 ![ETL Mind Map](https://github.com/nitinskunigal/SQL-Data-Warehouse-and-Analytics-Project/blob/main/docs/etl_mind_map.png)
 
-### 🧭 Architecture: Medallion Approach
+### Architecture: Medallion Approach
 
 | Layer | Purpose | Transformations | Load Type | Object Type |
 |-------|---------|-----------------|-----------|-------------|
@@ -119,37 +119,37 @@ The project implements a simplified yet realistic ETL (Extract → Transform →
 | **Silver** | Clean & standardized data | Cleansing, Normalization, Enrichment | Full load | Tables |
 | **Gold** | Business-ready layer | Integrations, Aggregations, Business Logic | No Load (Views only) | Views |
 
-### 🧱 Data Warehouse Architecture
+### Data Warehouse Architecture
 
 ![Data Warehouse Architecture Diagram](https://github.com/nitinskunigal/SQL-Data-Warehouse-and-Analytics-Project/blob/main/docs/data_architecture.drawio.png)
 
-📌 *This diagram illustrates the full Medallion Architecture (Bronze → Silver → Gold) and how data flows across layers in SQL Server.*
+*This diagram illustrates the full Medallion Architecture (Bronze → Silver → Gold) and how data flows across layers in SQL Server.*
 
-### 📊 Data Modeling
+### Data Modeling
 The Gold layer includes star schema views, flat tables, and aggregated objects for efficient reporting and ad hoc querying.
 
-### 📁 Source Systems
+### Source Systems
 - **ERP System** — Product and sales transactions
 - **CRM System** — Customer data and engagement records
 
-### 💡 Why No SSIS?
+### Why No SSIS?
 SSIS (SQL Server Integration Services) is a powerful ETL tool commonly used in enterprise setups, but it wasn't needed in this project. Since the data sources were flat files (CSV), I opted for a lightweight SQL-based approach using stored procedures, views, and the Medallion Architecture (Bronze → Silver → Gold). This kept the ETL process transparent, flexible, and easier to track inside SQL Server without requiring additional tooling.
 
-### 🔄 Automating the ETL Process
+### Automating the ETL Process
 
 To simulate a production-ready ETL pipeline, the stored procedures responsible for data ingestion (Bronze Layer) and data transformation (Silver Layer) were automated using .bat scripting and **Windows Task Scheduler**. Since SQL Server Express Edition doesn’t support SQL Server Agent, the scheduling was instead handled using .bat scripts and Windows Task Scheduler — a lightweight, low-overhead alternative commonly used for local development and proof-of-concept projects. This setup mimics how real-world ETL jobs are orchestrated, allowing the entire data refresh cycle — from loading raw CSV files to producing clean, analytics-ready tables — to run without manual intervention.
 
 ---
 
-## 📈 Phase 2: SQL-Based EDA and Advanced Data Analytics in SQL Server
+## Phase 2: SQL-Based EDA and Advanced Data Analytics in SQL Server
 
-### 📌 Objective
+### Objective
 Uncover key business insights using SQL by performing:
 - **Exploratory Data Analysis (EDA)**
 - **Advanced Business Analytics**
 - **Segmentation, Performance Tracking, and Trend Detection**
 
-### 🔍 Analysis Topics Covered
+### Analysis Topics Covered
 - Customer segmentation and behavior
 - Product performance analysis
 - Sales and revenue trends
@@ -157,14 +157,14 @@ Uncover key business insights using SQL by performing:
 - Time-based comparisons (MoM, QoQ)
 - Part-to-whole analysis and contribution breakdowns
 
-### 💡 Output
+### Output
 - Optimized SQL scripts for each theme
 - Business questions addressed through metrics
 - Reusable SQL templates for BI teams
 
 ---
 
-## 🗂️ Repository Structure
+## Repository Structure
 
 ```
 📁 data-warehouse-and-analytics-project/
@@ -202,18 +202,18 @@ Uncover key business insights using SQL by performing:
 
 ---
 
-> ⚠️ **Note on Historical Data**:  
+> **Note on Historical Data**:  
 > While the dataset used in this project spans from 2011 to 2014, it was selected for its realistic structure and complexity. This allowed for a robust simulation of real-world business scenarios including data modeling, segmentation, and KPI analysis.  
 > 
 > The **recommendations provided** are not intended for tactical execution but to demonstrate how an analyst would draw insights and inform strategy in a production environment.
 
 ---
 
-## 📊 Phase 3: Power BI Dashboards and Business Insights
+## Phase 3: Power BI Dashboards and Business Insights
 
 This section demonstrates how business-ready data from the Gold layer of the SQL data warehouse was connected to Power BI to uncover high-impact insights. I designed three interactive dashboards — Executive Overview, Customer Analysis, and Product Drillthrough — to simulate real-world reporting use cases. These dashboards were built with self-service BI in mind: stakeholders can explore data using filters, slicers, and drillthrough actions without needing to write SQL or request custom reports. The goal was to enable insight delivery at scale while keeping the analytical model standardized and governed.
 
-### 🔁 Power BI Auto-Refresh Simulation
+### Power BI Auto-Refresh Simulation
 
 The automation pipeline was extended to the reporting layer by connecting the published Power BI dashboards to the **On-Premises Gateway** and enabling scheduled refresh. This ensured that any updates made at the source level were automatically reflected in the visuals — allowing stakeholders to always work with the most current data without triggering manual refreshes. 
 
@@ -222,9 +222,9 @@ Together with the backend automation, this project simulates an end-to-end produ
 ---
 
 <details>
-<summary>🧭 <strong>Executive Dashboard</strong></summary>
+<summary> <strong>Executive Dashboard</strong></summary>
 
-### 🎯 Focus:
+### Focus:
 - Company-wide KPIs (Revenue, Profit, Orders, AOV)
 - Trend analysis and YoY comparisons
 - Category-level breakdowns
@@ -232,13 +232,13 @@ Together with the backend automation, this project simulates an end-to-end produ
 
 ![Executive Dashboard Screenshot](https://github.com/nitinskunigal/SQL-Data-Warehouse-and-Analytics-Project/blob/main/docs/PBI%20-%20Executive%20Dashboard.png)
 
-### 🔍 Key Insights:
+### Key Insights:
 - **Revenue** grew to $16.3M (↑179.77%) and **Orders** surged 550% YoY — demand clearly exploded in 2013.
 - However, **Avg Order Value** dropped 57% — indicating growth was volume-driven, not value-driven.
 - Accessories led order volume, but high performers in Bikes contributed most to profit.
 - Dynamic product matrix lets stakeholders view Top N products by Revenue, Orders, or AOV.
 
-### ✅ Recommendations:
+### Recommendations:
 - Explore bundling or pricing strategies to improve AOV.
 - Monitor inventory and fulfillment capacity to manage volume efficiently.
 
@@ -247,9 +247,9 @@ Together with the backend automation, this project simulates an end-to-end produ
 ---
 
 <details>
-<summary>👥 <strong>Customer Dashboard</strong></summary>
+<summary> <strong>Customer Dashboard</strong></summary>
 
-### 🎯 Focus:
+### Focus:
 - Customer-level KPIs: Revenue per Customer, Monthly Spend, Order Frequency
 - Top 100 customers by revenue and engagement
 - Segment-wise donut charts: Revenue and Orders by Segment
@@ -257,13 +257,13 @@ Together with the backend automation, this project simulates an end-to-end produ
 
 ![Customer Dashboard Screenshot](https://github.com/nitinskunigal/SQL-Data-Warehouse-and-Analytics-Project/blob/main/docs/PBI%20-%20Customer%20Dashboard.png)
 
-### 🔍 Key Insights:
+### Key Insights:
 - The company served **17.4K customers** in 2013 but most made **only 1.2 orders** on average.
 - Revenue per Customer: **$938**, with Monthly Spend averaging **$171**.
 - New Customers made up **76% of all orders**, but contributed less to revenue — pointing to a retention challenge.
 - VIPs and Regulars are small in number but hold higher per-customer value.
 
-### ✅ Recommendations:
+### Recommendations:
 - Launch loyalty or reactivation campaigns to increase order frequency.
 - Segment-targeted promotions could convert New → Regular → VIP.
 
@@ -272,9 +272,9 @@ Together with the backend automation, this project simulates an end-to-end produ
 ---
 
 <details>
-<summary>📦 <strong>Product Drillthrough Dashboard</strong></summary>
+<summary> <strong>Product Drillthrough Dashboard</strong></summary>
 
-### 🎯 Focus:
+### Focus:
 - Deep-dive into performance of a selected product (via drillthrough)
 - Key KPIs: Average Order Revenue and Average Monthly Revenue
 - Price sensitivity simulation: Compare Adjusted vs Base Profit for different price points
@@ -282,11 +282,11 @@ Together with the backend automation, this project simulates an end-to-end produ
 
 ![Product Drillthrough Screenshot](https://github.com/nitinskunigal/SQL-Data-Warehouse-and-Analytics-Project/blob/main/docs/PBI%20-%20Product%20Drillthrough%20Dashboard.png)
 
-### 🔍 Key Insights:
+### Key Insights:
 - Profit optimization scenarios allow decision-makers to simulate the financial impact of price changes.
 - Weekly/ monthly metric trends help uncover seasonal dips or campaign performance, guiding better planning.
 
-### ✅ Recommendations:
+### Recommendations:
 - Fine-tune product pricing using profit simulations to maximize margin without hurting volume.
 - Schedule promotions around historically low-performing periods to boost sales.
 
@@ -294,7 +294,7 @@ Together with the backend automation, this project simulates an end-to-end produ
 
 ---
 
-### 📌 Dashboard Features & Highlights:
+### Dashboard Features & Highlights:
 - **Slicer Panel with Bookmarks** to toggle filters by Year, Country, and Product Segment
 - **Dynamic Top N Selector** (Revenue, Orders, AOV)
 - **Product Drillthrough Navigation**
@@ -305,7 +305,7 @@ Together with the backend automation, this project simulates an end-to-end produ
 
 ---
 
-## 📌 Key Deliverables
+## Key Deliverables
 
 - A fully functional, SQL Server-based **scalable data warehouse** following industry-standard **layered Medallion Architecture**
 
@@ -323,7 +323,7 @@ Together with the backend automation, this project simulates an end-to-end produ
 
 ---
 
-## 📎 Future Enhancements
+## Future Enhancements
 
 - Automating incremental loads via Change Data Capture (CDC)
 
