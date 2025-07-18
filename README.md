@@ -151,12 +151,12 @@ SSIS (SQL Server Integration Services) is a powerful ETL tool commonly used in e
 
 ### Automating the ETL Process
 
-To simulate a production-ready ETL pipeline, the stored procedures responsible for data ingestion (Bronze Layer) and data transformation (Silver Layer) were automated using .bat scripting and **Windows Task Scheduler**. Since SQL Server Express Edition doesn’t support SQL Server Agent, the scheduling was instead handled using .bat scripts and Windows Task Scheduler — a lightweight, low-overhead alternative commonly used for local development and proof-of-concept projects. This setup mimics how real-world ETL jobs are orchestrated, allowing the entire data refresh cycle — from loading raw CSV files to producing clean, analytics-ready tables — to run without manual intervention.
+To simulate a production-ready ETL pipeline, the stored procedures responsible for data ingestion (Bronze Layer) and data transformation (Silver Layer) were automated using .bat scripting and **Windows Task Scheduler**. Since SQL Server Express Edition doesn’t support SQL Server Agent, the scheduling was instead handled using batch scripts and Windows Task Scheduler — a lightweight, low-overhead alternative commonly used for local development and proof-of-concept projects. This setup mimics how real-world ETL jobs are orchestrated, allowing the entire data refresh cycle — from loading raw CSV files to producing clean, analytics-ready tables — to run without manual intervention.
 
-### Challenges Faced
+### Challenges Faced / Lessons Learned
 
-- **Data Quality Issues**: The ERP and CRM files contained inconsistent formatting, duplicates, missing values, non-standard codes (e.g., gender, country, dates), etc. Resolving these while preserving integrity was a time-consuming but essential task.
-- **Complex Business Logic**: Columns like `product_end_date`, derived through forward-looking logic, and pricing backfills needed iterative debugging to ensure business correctness.
+- **Data Quality Issues**: The ERP and CRM files contained inconsistent formatting, duplicates, missing values, nulls, and non-standard codes like gender and country, which made data cleaning highly detail-oriented.
+- **Complex Business Logic**: Applied forward-looking logic and enriched product end dates using future start dates. I also applied data backfilling logic to missing sales or pricing fields. Both of these instances needed iterative debugging to ensure business correctness.
 - **ETL Automation with Constraints**: Due to limitations in SQL Server Express (no SQL Agent), ETL orchestration had to be mimicked using `.bat` scripts and Task Scheduler — simulating real-world job automation within tooling constraints.
 - **Maintaining Reusability**: Keeping stored procedures modular and auditable required deliberate structuring to ensure transformations were transparent and traceable.
 
@@ -183,11 +183,11 @@ Uncover key business insights using SQL by performing:
 - Business questions addressed through metrics
 - Reusable SQL templates for BI teams
 
-### Challenges Faced
+### Challenges Faced / Lessons Learned
 
-- **Interpreting Business Context**: Deriving meaning from raw transactional data required simulating stakeholder intent — e.g., identifying whether a drop in AOV signals a pricing issue or customer churn.
-- **Balancing Granularity and Performance**: Writing performant SQL queries using CTEs and window functions across 29M+ in revenue while preserving granularity for trend analysis was critical.
-- **Bias in Metrics**: Understanding how over-weighting new customer orders could skew retention analysis helped simulate realistic pitfalls an analyst might face.
+- It was critical to separate true business signals from misleading metrics. For instance, high order volume seemed positive at first, but without tying it to revenue contribution, it could easily lead to misleading conclusions.
+- Balancing SQL performance with analytical depth required optimizing query design across large tables.
+- Business context influences interpretation — a number on its own means little unless tied back to strategic goals.
 
 ---
 
@@ -315,8 +315,9 @@ Together with the backend automation, this project simulates an end-to-end produ
 
 ### Challenges Faced
 
-- **Designing for Personas**: Creating dashboards that align with the mental models of executives, marketers, and product managers was a balancing act — what’s insightful to one persona may overwhelm another.
-- **Governance Considerations**: Though not implemented here, designing with future scalability in mind meant understanding how row-level security and role-based access would apply in an enterprise context.
+- Designing dashboards for different personas required trade-offs between simplicity and detail.
+- The Power BI data model had to support filters, drillthroughs, and simulations without performance lags.
+- While I didn’t implement row-level security, I learned how it fits into enterprise BI governance.
 
 ---
 
