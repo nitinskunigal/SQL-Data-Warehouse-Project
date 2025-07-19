@@ -1,16 +1,16 @@
-# SQL Data Warehouse & Analytics Project
+# Full-Stack Business Intelligence (BI) Project: SQL Data Warehouse & Analytics
 
-Welcome to the **SQL Data Warehouse & Analytics Project** repository!
+Welcome to the **Full-Stack Business Intelligence (BI) Project** repository!
 
-This project demonstrates the full cycle of a data-driven solution — from building a scalable data warehouse using SQL Server to performing exploratory and advanced analytics and finally delivering powerful business insights through interactive Power BI dashboards.
+This project demonstrates a complete BI solution — from building a scalable data warehouse and performing SQL-based exploratory & advanced analytics in SQL Server, to delivering interactive dashboards in Power BI for high-impact storytelling.
 
-The project is structured into **three interconnected phases**, reflecting a full-stack analytics workflow:
+The project is structured into **three interconnected phases**, reflecting a full-stack BI workflow:
 
 1. **Data Engineering** — Design and implementation of a scalable data warehouse using SQL Server and the Medallion Architecture
 2. **Data Analytics** — SQL-based exploratory and advanced analytics to uncover customer, product, and sales insights
 3. **Business Intelligence (BI)** — Visualization and storytelling using Power BI, including KPI dashboards, drillthrough reports, and dynamic filtering
 
-This end-to-end approach mirrors real-world data projects — from raw data to insights that drive decisions. Although the dataset is historical (2011–2014), it provided a rich opportunity to simulate real-world warehouse design, business rule application, and dashboard delivery — the skills demonstrated here are timeless.
+This end-to-end approach mirrors real-world BI projects — from raw data to insights that drive decisions. Although the dataset is historical (2011–2014), it provides a rich opportunity to simulate enterprise-grade warehouse design, data modeling, and stakeholder-focused dashboard delivery — the skills demonstrated here are timeless.
 
 ---
 
@@ -20,7 +20,7 @@ This end-to-end approach mirrors real-world data projects — from raw data to i
 - [Objective](#objective)
 - [Project Overview](#project-overview)
 - [Stakeholder Requirements and Source System Understanding](#stakeholder-requirements-and-source-system-understanding)
-- [Phase 1: Building the scalable Data Warehouse in SQL Server](#phase-1-building-the-scalable-data-warehouse-in-sql-server)
+- [Phase 1: Designing the scalable Data Warehouse in SQL Server](#phase-1-designing-the-scalable-data-warehouse-in-sql-server)
 - [Phase 2: EDA and Advanced Data Analytics in SQL Server](#phase-2-eda-and-advanced-data-analytics-in-sql-server)
 - [Phase 3: Power BI Dashboards and Business Insights](#phase-3-power-bi-dashboards-and-business-insights)
 - [Key Deliverables](#key-deliverables)
@@ -65,7 +65,7 @@ By consolidating fragmented ERP and CRM data into a centralized warehouse, the s
 - Identify gaps in customer retention and order quality
 - Simulate pricing scenarios to optimize profit margins
 
-This project also showcased how full-stack analytics — from data warehousing to visualization — can accelerate insight delivery, reduce manual effort, and improve the accuracy of decision-making across the business.
+This project also showcased how full-stack BI workflows — from data warehousing to visualization — can accelerate insight delivery, reduce manual effort, and improve the accuracy of decision-making across the business.
 
 ---
 
@@ -112,7 +112,7 @@ Here are a few example user stories created as part of the stakeholder requireme
 
 ---
 
-## Phase 1: Building the scalable Data Warehouse in SQL Server
+## Phase 1: Designing a Scalable Data Warehouse (Full-Stack BI Foundation)
 
 ### Objective
 Design and implement a scalable data warehouse using **SQL Server** to consolidate and model sales, customer, and product data from multiple source systems, enabling reliable analytical reporting.
@@ -160,9 +160,11 @@ To simulate a production-ready ETL pipeline, the stored procedures responsible f
 - **ETL Automation with Constraints**: Due to limitations in SQL Server Express (no SQL Agent), ETL orchestration had to be mimicked using batch scripts and Task Scheduler — simulating real-world job automation within tooling constraints.
 - **Maintaining Reusability**: Keeping stored procedures modular and auditable required deliberate structuring to ensure transformations were transparent and traceable.
 
+This project was structured to reflect modern BI architecture and simulate full-stack delivery across ETL, modeling, and reporting layers — even within local development constraints.
+
 ---
 
-## Phase 2: SQL-Based EDA and Advanced Data Analytics in SQL Server
+## Phase 2: EDA and Advanced Data Analytics in SQL Server
 
 ### Objective
 Uncover key business insights using SQL by performing:
@@ -191,54 +193,9 @@ Uncover key business insights using SQL by performing:
 
 ---
 
-## Repository Structure
-
-```
-📁 data-warehouse-and-analytics-project/
-├── 📁 datasets/                            # Raw datasets used for the project (ERP and CRM data)
-
-├── 📁 docs/                                # Project documentation and architecture details
-│   ├── 📄 data_architecture.drawio           # High-level project architecture (Bronze, Silver, Gold)
-│   ├── 📄 data_catalog_source_system.md      # Captures essential metadata of source systems
-│   ├── 📄 data_catalog_source_system.xlx     # Data Catalog in Excel sheet format
-│   ├── 📄 data_cleaning_transformation.md    # Outlines the key data cleaning and transformation techniques
-│   ├── 📄 data_dictionary.md                 # Provides detailed metadata for each column in the business-ready tables
-│   ├── 📄 data_flow.drawio                   # Visual representation of data flow across layers
-│   ├── 📄 data_flow_tasks.drawio             # Flow of tasks in each layer — analyzing, coding, validating, documenting
-│   ├── 📄 data_integration.drawio            # Visual representation that depicts how Source Tables are connected
-│   ├── 📄 data_layer_specifications.drawio   # Summarizes the objectives, transformations, and targets of each layer
-│   ├── 📄 data_model.drawio                  # Data model design (e.g., star schema)
-│   ├── 📄 etl_methods.md                     # Brief explanation of ETL strategy and methods used in this project
-│   ├── 📄 etl_mind_map.png                   # Mind map showing the holistic understanding of ETL
-│   └── 📄 naming_conventions.md              # Consistent naming guidelines for tables, columns, and files
-│   ├── 📄 project_presentation.pdf           # Presentation deck related to this project
-
-├── 📁 scripts/                             # All SQL-based work divided into two main tracks
-│
-│   ├── 📁 data_warehouse/                  # Scripts for building the data warehouse
-│   │   ├── 📁 bronze/                        # Scripts for extracting and loading (full load) raw data
-│   │   ├── 📁 silver/                        # Scripts for cleaning and transforming data
-│   │   └── 📁 gold/                          # Scipts for creating analytical models (views and data models)
-│
-│   └── 📁 eda_analytics/                   # Scripts for EDA and advanced data (business) analytics
-
-├── 📁 tests/                               # QA scripts for verifying integrity and logic of gold and silver layers
-
-├── 📄 README.md                            # Project overview and instructions
-```
-
----
-
-> **Note on Historical Data**:  
-> While the dataset used in this project spans from 2011 to 2014, it was selected for its realistic structure and complexity. This allowed for a robust simulation of real-world business scenarios including data modeling, segmentation, and KPI analysis.  
-> 
-> The **recommendations provided** are not intended for tactical execution but to demonstrate how an analyst would draw insights and inform strategy in a production environment.
-
----
-
 ## Phase 3: Power BI Dashboards and Business Insights
 
-This section demonstrates how business-ready data from the Gold layer of the SQL data warehouse was connected to Power BI to uncover high-impact insights. I designed three interactive dashboards — Executive Overview, Customer Analysis, and Product Drillthrough — to simulate real-world reporting use cases. These dashboards were built with self-service BI in mind: stakeholders can explore data using filters, slicers, and drillthrough actions without needing to write SQL or request custom reports. The goal was to enable insight delivery at scale while keeping the analytical model standardized and governed.
+This section demonstrates how business-ready data from the Gold layer of the SQL data warehouse was connected to Power BI to uncover high-impact insights. These three dashboards — Executive Overview, Customer Analysis, and Product Drillthrough — simulate production-ready BI delivery, empowering different personas across the organization. The dashboards were built with self-service BI in mind: stakeholders can explore data using filters, slicers, and drillthroughs without writing SQL or requesting custom reports.
 
 ### Power BI Auto-Refresh Simulation
 
@@ -332,9 +289,54 @@ Together with the backend automation, this project simulates an end-to-end produ
 
 ---
 
+## Repository Structure
+
+```
+📁 data-warehouse-and-analytics-project/
+├── 📁 datasets/                            # Raw datasets used for the project (ERP and CRM data)
+
+├── 📁 docs/                                # Project documentation and architecture details
+│   ├── 📄 data_architecture.drawio           # High-level project architecture (Bronze, Silver, Gold)
+│   ├── 📄 data_catalog_source_system.md      # Captures essential metadata of source systems
+│   ├── 📄 data_catalog_source_system.xlx     # Data Catalog in Excel sheet format
+│   ├── 📄 data_cleaning_transformation.md    # Outlines the key data cleaning and transformation techniques
+│   ├── 📄 data_dictionary.md                 # Provides detailed metadata for each column in the business-ready tables
+│   ├── 📄 data_flow.drawio                   # Visual representation of data flow across layers
+│   ├── 📄 data_flow_tasks.drawio             # Flow of tasks in each layer — analyzing, coding, validating, documenting
+│   ├── 📄 data_integration.drawio            # Visual representation that depicts how Source Tables are connected
+│   ├── 📄 data_layer_specifications.drawio   # Summarizes the objectives, transformations, and targets of each layer
+│   ├── 📄 data_model.drawio                  # Data model design (e.g., star schema)
+│   ├── 📄 etl_methods.md                     # Brief explanation of ETL strategy and methods used in this project
+│   ├── 📄 etl_mind_map.png                   # Mind map showing the holistic understanding of ETL
+│   └── 📄 naming_conventions.md              # Consistent naming guidelines for tables, columns, and files
+│   ├── 📄 project_presentation.pdf           # Presentation deck related to this project
+
+├── 📁 scripts/                             # All SQL-based work divided into two main tracks
+│
+│   ├── 📁 data_warehouse/                  # Scripts for building the data warehouse
+│   │   ├── 📁 bronze/                        # Scripts for extracting and loading (full load) raw data
+│   │   ├── 📁 silver/                        # Scripts for cleaning and transforming data
+│   │   └── 📁 gold/                          # Scipts for creating analytical models (views and data models)
+│
+│   └── 📁 eda_analytics/                   # Scripts for EDA and advanced data (business) analytics
+
+├── 📁 tests/                               # QA scripts for verifying integrity and logic of gold and silver layers
+
+├── 📄 README.md                            # Project overview and instructions
+```
+
+---
+
+> **Note on Historical Data**:  
+> While the dataset used in this project spans from 2011 to 2014, it was selected for its realistic structure and complexity. This allowed for a robust simulation of real-world business scenarios including data modeling, segmentation, and KPI analysis.  
+> 
+> The **recommendations provided** are not intended for tactical execution but to demonstrate how an analyst would draw insights and inform strategy in a production environment.
+
+---
+
 ## Key Deliverables
 
-- A fully functional, SQL Server-based **scalable data warehouse** following industry-standard **layered Medallion Architecture**
+- A fully functional, SQL Server-based **full-stack BI solution** following industry-standard **layered Medallion Architecture**
 
 - Clean and reusable **[SQL scripts](https://github.com/nitinskunigal/SQL-Data-Warehouse-and-Analytics-Project/tree/main/scripts)** for analytics
 
